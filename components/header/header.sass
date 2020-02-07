@@ -1,0 +1,66 @@
+.header
+  display: flex
+  flex-direction: column
+  align-items: center
+  a
+    text-decoration: none
+
+  &__logo
+    margin-top: 30px
+    width: 246px
+    height: 181px
+
+  &__categories-container
+    margin: 50px 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  &__category
+    font-size: 20px
+    font-weight: 500
+    letter-spacing: 1.4px
+    color: #4d4d4d
+    padding-bottom: 8px
+    padding-right: 5px
+    margin-bottom: 14px
+    &:hover
+      padding-bottom: 5px
+      border-bottom: solid 3px #897ac8
+    &--no-hover-effect
+      font-size: 20px
+      font-weight: 500
+      letter-spacing: 1.4px
+      color: #4d4d4d
+      padding-bottom: 8px
+      margin-bottom: 14px
+      text-align: center
+      &:hover
+        .header__accordions-container
+          display: flex
+          flex-direction: column
+          max-width: 152px
+        
+  &__svg-arrow
+    fill: #897ac8
+    padding-left: 11px
+
+  &__accordions-container
+    display: none
+    text-align: left
+    background-color: rgba(255,255,255, 0.7) !important
+
+  &__additional-container
+    padding: 0 12px
+
+  &__accordion
+    display: flex
+    color: #4d4d4d
+    font-size: 18px
+    letter-spacing: 1.26px
+    padding: 9px 0
+    width: 100%
+    &:hover
+      padding-bottom: 8px
+      border-bottom: solid 1px #897ac8
