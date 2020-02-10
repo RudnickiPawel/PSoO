@@ -5,6 +5,4 @@ $(document).ready(function () {
     $(".header__radio-button circle").removeClass("header__radio-button--active");
     $(this).find("circle:last").addClass("header__radio-button--active");
   });
-
-
 });

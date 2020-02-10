@@ -36,6 +36,8 @@
   margin-top: 30px;
   width: 246px;
   height: 181px;
+  position: relative;
+  left: 23px;
 }
 
 .header__categories-container {
