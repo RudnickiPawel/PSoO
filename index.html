@@ -42,31 +42,43 @@
             <div class="header__calculator">
               <div class="header__calculator__title">Kalkulator BMI</div>
               <div class="header__calculator__instruction">Oblicz swój wskaźnik BMI</div>
-              <div class="header__wrapper">
-                <div class="header__calculator__info">
-                  <span class="header__calculator__label1">Płeć:</span>
-                  <span class="header__calculator__label2">Waga:</span>
-                  <span class="header__calculator__label3">Wzrost:</span>
+              <div class="header__calculator__wrapper">
+                <div class="header__calculator__labels">
+                  <span class="header__calculcator__gender-label">Płeć:</span>
+                  <span class="header__calculcator__weight-label">Waga:</span>
+                  <span class="header__calculcator__height-label">Wzrost:</span>
                 </div>
-                <div class="header__calculator__inputs-container">
-                  <div class="header__calculator__radio-buttons">
-                    <svg class="header__radio-svg" xmlns="http://www.w3.org/2000/svg" width="24.445" height="24.445" viewBox="0 0 24.445 24.445">
+                <div class="header__calculator__inputs">
+                  <span>
+                    <!-- input can be taken by checking which svg contains 2nd circle with the '--active' class -->
+                    <svg class="header__radio-svg" xmlns="http://www.w3.org/2000/svg" width="24.445" height="24.445"
+                      viewBox="0 0 24.445 24.445">
                       <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
-                        <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8" stroke-miterlimit="10" stroke-width="1"/>
-                        <circle class="header__radio-button--active" data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689" transform="translate(7.033 7.033)" fill="#fff" stroke="#fff" stroke-width="1"/>
+                        <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
+                          stroke-miterlimit="10" stroke-width="1" />
+                        <circle class="header__radio-button--active" data-name="Ellipse 2" cx="4.689" cy="4.689"
+                          r="4.689" transform="translate(7.033 7.033)" fill="#fff" stroke="#fff" stroke-width="1" />
                       </g>
                     </svg>
-                    <span>K</span>
-                    <svg class="header__radio-svg" style="margin-left: 35px" xmlns="http://www.w3.org/2000/svg" width="24.445" height="24.445" viewBox="0 0 24.445 24.445">
+                    <span class="header__calculator__radio-text">K</span>
+                    <svg class="header__radio-svg" style="margin-left: 35px" xmlns="http://www.w3.org/2000/svg"
+                      width="24.445" height="24.445" viewBox="0 0 24.445 24.445">
                       <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
-                        <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8" stroke-miterlimit="10" stroke-width="1"/>
-                        <circle data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689" transform="translate(7.033 7.033)" fill="#fff"  stroke="#fff" stroke-width="1"/>
+                        <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
+                          stroke-miterlimit="10" stroke-width="1" />
+                        <circle data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689" transform="translate(7.033 7.033)"
+                          fill="#fff" stroke="#fff" stroke-width="1" />
                       </g>
                     </svg>
-                    <span>M</span>
-                  </div>
-                  <div><input class="header__text-input" type="text">kg</div>
-                  <div><input class="header__text-input" type="text">cm</div>
+                    <span class="header__calculator__radio-text">M</span>
+                  </span>
+                  <span><input class="header__text-input header__user-weight" type="text">kg</span>
+                  <span><input class="header__text-input header__user-height" type="text">cm</span>
+                </div>
+              </div>
+              <div class="header__calculcator__button-container">
+                <div class="header__calculator__button-bmi">
+
                 </div>
               </div>
             </div>
