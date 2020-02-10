@@ -104,8 +104,6 @@
     &__wrapper
       width: 100%
       display: flex
-      @media screen and ( max-width: 969px )
-        margin-bottom: 30px
       
     &__labels
       font-size: 24px
@@ -130,10 +128,22 @@
     &__button-container
       display: flex
       justify-content: center
+      cursor: pointer
+      margin-top: 64px
+      @media screen and ( max-width: 969px )
+        margin-bottom: 30px
+      &:hover
+        .header__calculator__button-bmi
+          color: #000
+
 
     &__button-bmi
-      width: 50px
-      height: 50
+      font-size: 20px
+      font-weight: 500
+      letter-spacing: 1.4px
+      color: #fff
+      padding: 10px 43px 17px
+      background-color: #897ac8
     
   &__user-weight
     margin: 20px 0

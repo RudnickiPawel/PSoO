@@ -196,12 +196,6 @@
   display: flex;
 }
 
-@media screen and (max-width: 969px) {
-  .header__calculator__wrapper {
-    margin-bottom: 30px;
-  }
-}
-
 .header__calculator__labels {
   font-size: 24px;
   font-weight: 300;
@@ -240,11 +234,27 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  margin-top: 64px;
+}
+
+@media screen and (max-width: 969px) {
+  .header__calculator__button-container {
+    margin-bottom: 30px;
+  }
+}
+
+.header__calculator__button-container:hover .header__calculator__button-bmi {
+  color: #000;
 }
 
 .header__calculator__button-bmi {
-  width: 50px;
-  height: 50;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  color: #fff;
+  padding: 10px 43px 17px;
+  background-color: #897ac8;
 }
 
 .header__user-weight {
