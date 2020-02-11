@@ -1,50 +1,120 @@
 .header
   display: flex
+  margin: 30px 12.5% 0
   flex-direction: column
-  align-items: center
+  @media (min-width: 1201px) and ( max-width: 1700px )
+    margin: 30px 7% 0
+  @media (min-width: 970px) and ( max-width: 1200px )
+    margin: 30px 3% 0
+    
+  @media screen and ( max-width: 969px )
+    margin: 0
+    align-items: center
   a
     text-decoration: none
 
+  &__container
+    display: flex
+    position: relative
+    @media (min-width: 970px) and ( max-width: 1400px )
+      flex-direction: column
+      align-items: center
+    @media screen and ( max-width: 969px )
+      display: block
+
   &__logo
-    margin-top: 30px
     width: 246px
     height: 181px
-    position: relative
-    left: 23px
+    @media screen and ( max-width: 1400px )
+      position: relative
+      left: 23px
+      
+    @media screen and ( max-width: 969px )
+      margin-top: 30px
 
   &__categories-container
-    margin: 50px 0
     display: flex
     justify-content: center
     align-items: center
+    height: fit-content
+    margin: 0
+    margin-top: 39px
+    
+    @media screen and ( min-width: 1700px )
+      position: absolute
+      right: 0
+      
+    @media (min-width: 1401px) and ( max-width: 1700px )
+      position: absolute
+      right: calc(50% - 600px)
+      
     @media screen and ( max-width: 969px )
       flex-direction: column
+      margin: 50px 0
+      position: static
 
   &__category
     font-size: 20px
     font-weight: 500
     letter-spacing: 1.4px
     color: #4d4d4d
-    padding-bottom: 8px
     padding-right: 5px
-    margin-bottom: 14px
+    text-align: center
+    display: inline
+    padding-bottom: 8px
+    @media (min-width: 970px) and ( max-width: 1700px )
+      font-size: 16px
     &:hover
       padding-bottom: 5px
       border-bottom: solid 3px #897ac8
+      
+    &__main
+
+    &__about
+      margin: 14px 0
+      @media screen and ( min-width: 970px )
+        margin-left: 39px
+        margin-right: 43px
+
+    &__team
+      margin: 14px 0
+      @media screen and ( min-width: 970px )
+        margin-left: 38px
+        margin-right: 43px
+
+    &__stories
+      @media screen and ( max-width: 969px )
+        padding-bottom: 0
+
     &--no-hover-effect
+      position: relative
       font-size: 20px
       font-weight: 500
       letter-spacing: 1.4px
-      color: #4d4d4d
-      padding-bottom: 8px
-      margin-bottom: 14px
+      color: #4d4d4d  
       text-align: center
+      display: flex
+      align-items: center
+      padding-bottom: 8px
+      @media (min-width: 970px) and ( max-width: 1700px )
+        font-size: 16px
+        
       &:hover
         .header__accordions-container
           display: flex
           flex-direction: column
           max-width: 152px
-        
+          position: absolute
+          top: 25px
+            
+          @media screen and ( max-width: 969px )
+            position: static
+        .header__svg-arrow2
+          transform: rotate(90deg)
+          padding: 0
+          padding-bottom: 11px
+          width: 17px
+            
   &__svg-arrow
     fill: #897ac8
     padding-left: 11px
@@ -64,6 +134,10 @@
     letter-spacing: 1.26px
     padding: 9px 0
     width: 100%
+      
+    @media (min-width: 970px) and ( max-width: 1200px )
+      font-size: 14px
+      
     &:hover
       padding-bottom: 8px
       border-bottom: solid 1px #897ac8
@@ -75,7 +149,14 @@
       flex-direction: column
 
   &__item
-
+    &1
+      @media screen and ( min-width: 1200px )
+        width: 38.38%
+    &2
+      @media (min-width: 970px) and ( max-width: 1200px )
+        width: 53%       
+      @media screen and ( min-width: 1200px )
+        width: 100%
 
   &__calculator
     display: flex
@@ -84,6 +165,8 @@
     flex-direction: column
     margin-bottom: 30px
     width: 320px
+    margin-left: 91px
+    margin-top: 174px
     @media screen and ( max-width: 969px )
       margin: 0 auto
 
@@ -183,6 +266,22 @@
     max-width: 1183px
     height: 934px
     margin: 0 auto
+    @media screen and ( min-width: 1600px )
+      position: absolute
+      right: 0
+      width: 100%
+      top: 146px
+      
+    @media ( min-width: 1400px ) and (max-width: 1599px)
+      position: absolute
+      right: 0
+      width: 53%
+      top: 146px
+    @media (min-width: 970px) and ( max-width: 1399px)
+      position: absolute
+      right: 0
+      width: 50%
+      
     @media (min-width: 800px) and (max-width: 969px)
       background-position: 100%
 
