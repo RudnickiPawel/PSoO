@@ -1,12 +1,7 @@
 .header
   display: flex
-  margin: 30px 12.5% 0
   flex-direction: column
-  @media (min-width: 1201px) and ( max-width: 1700px )
-    margin: 30px 7% 0
-  @media (min-width: 970px) and ( max-width: 1200px )
-    margin: 30px 3% 0
-    
+  position: relative
   @media screen and ( max-width: 969px )
     margin: 0
     align-items: center
@@ -16,6 +11,11 @@
   &__container
     display: flex
     position: relative
+    margin: 30px 12.5% 0
+    @media (min-width: 1201px) and ( max-width: 1700px )
+      margin: 30px 7% 0
+    @media (min-width: 970px) and ( max-width: 1200px )
+      margin: 30px 3% 0
     @media (min-width: 970px) and ( max-width: 1400px )
       flex-direction: column
       align-items: center
@@ -78,7 +78,7 @@
         margin-left: 39px
         margin-right: 43px
 
-    &__team
+    &__specialists
       margin: 14px 0
       @media screen and ( min-width: 970px )
         margin-left: 38px
@@ -89,38 +89,38 @@
         padding-bottom: 0
 
     &--no-hover-effect
+      display: flex
+      flex-direction: column
       position: relative
       font-size: 20px
       font-weight: 500
       letter-spacing: 1.4px
       color: #4d4d4d  
       text-align: center
-      display: flex
-      align-items: center
       padding-bottom: 8px
       @media (min-width: 970px) and ( max-width: 1700px )
         font-size: 16px
-        
+      span
+        margin: 14px 0
       &:hover
         .header__accordions-container
           display: flex
           flex-direction: column
           max-width: 152px
           position: absolute
-          top: 25px
+          top: 45px
           z-index: 2
-            
           @media screen and ( max-width: 969px )
             position: static
         .header__svg-arrow2
           transform: rotate(90deg)
-          padding: 0
-          padding-bottom: 11px
-          width: 17px
+          transition: transform 0.5s
             
   &__svg-arrow
+    transition: transform 0.5s
+    position: relative
     fill: #897ac8
-    padding-left: 11px
+    margin-left: 11px
 
   &__accordions-container
     display: none
@@ -137,7 +137,6 @@
     letter-spacing: 1.26px
     padding: 9px 0
     width: 100%
-      
     @media (min-width: 970px) and ( max-width: 1200px )
       font-size: 14px
       
@@ -148,7 +147,13 @@
   &__content
     width: 100%
     display: flex
+    margin: 30px 0 0 12.5%
+    @media (min-width: 1201px) and ( max-width: 1700px )
+      margin: 30px 0 0 7%
+    @media (min-width: 970px) and ( max-width: 1200px )
+      margin: 30px 0 0 3%
     @media screen and ( max-width: 969px  )
+      margin: 0
       flex-direction: column
 
   &__item
@@ -263,37 +268,49 @@
     color: #4d4d4d
     
   &__image-container
-    position: relative
     background-image: url("src/header-image.png")
     background-repeat: no-repeat
     background-position: 65%
     max-width: 1183px
     height: 934px
     margin: 0 auto
-    z-index: 0
     @media screen and ( min-width: 1600px )
       position: absolute
+      margin-left: auto
       right: 0
       width: 100%
       top: 146px
-      
-    @media ( min-width: 1400px ) and (max-width: 1599px)
+    @media ( min-width: 1401px ) and (max-width: 1599px)
       position: absolute
       right: 0
       width: 53%
       top: 146px
-    @media (min-width: 970px) and ( max-width: 1399px)
+    @media (min-width: 970px) and ( max-width: 1400px)
       position: absolute
       right: 0
       width: 50%
-      
     @media (min-width: 800px) and (max-width: 969px)
       background-position: 100%
-
     @media screen and ( max-width: 450px )
       height: 500px
       background-size: 600px 480px
       background-position: 70%
+  &__arrow-container
+    display: flex
+    justify-content: center
+    z-index: 1
+    @media screen and ( min-width: 1401px )
+      margin-top: 160px
+    @media (min-width: 970px) and ( max-width: 1400px)
+      margin-top: 250px
+    @media screen and (max-width: 969px)
+      position: relative
+      bottom: 70px
       
-  //TODO: there should be some of the background visible through the image
+  &__next-section-arrow
+    fill: #fff
+    opacity: 0.85
+    &:hover
+      opacity: 1
+
   //TODO: add BMI calculation and add display of output

@@ -10,86 +10,94 @@
 </head>
 
 <body>
-  <div class="background background__small">
-  </div>
-    <div class="container container--main-page">
-      <div class="header">
-        <div class="header__container">
+  <div class="background background__small"></div>
+  <div class="container container--main-page">
+    <div id="header" class="header">
+      <div class="header__container">
         <img src="src/logo.png" alt="" class="header__logo">
         <div class="header__categories-container">
-          <a href="" class="header__category header__category__main">STRONA GŁÓWNA</a>
-          <a href="" class="header__category header__category__about">O CHOROBIE</a>
+          <a href="#" class="header__category header__category__main">STRONA GŁÓWNA</a>
+          <a href="views/about" class="header__category header__category__about">O CHOROBIE</a>
           <div class="header__category--no-hover-effect">
-            DLA PACJENTA
-            <svg class="header__svg-arrow header__svg-arrow2" xmlns="http://www.w3.org/2000/svg" width="11" height="12"
-              viewBox="0 0 11 12">
-              <path class="header__svg-arrow" data-name="Polygon 1" d="M6,0l6,11H0Z"
-                transform="translate(11) rotate(90)" />
-            </svg>
+            <span style="display: flex; align-items: center;">DLA PACJENTA
+              <svg class="header__svg-arrow header__svg-arrow2" xmlns="http://www.w3.org/2000/svg" width="11"
+                height="12" viewBox="0 0 11 12">
+                <path class="header__svg-arrow" data-name="Polygon 1" d="M6,0l6,11H0Z"
+                  transform="translate(11) rotate(90)" />
+              </svg>
+            </span>
             <div class="header__accordions-container">
               <div class="header__additional-container">
-                <a href="" class="header__accordion">LECZENIE</a>
-                <a href="">
+                <a href="views/treatment" class="header__accordion">LECZENIE</a>
+                <a href="views/sources">
                   <div class="header__accordion header__wrapper">MATERIAŁY <br>EDUKACYJNE</div>
                 </a>
               </div>
             </div>
           </div>
-          <a href="" class="header__category header__category__team">SPECJALIŚCI</a>
-          <a href="" class="header__category header__category__stories">HISTORIE PACJENTÓW</a>
+          <a href="views/specialists" class="header__category header__category__specialists">SPECJALIŚCI</a>
+          <a href="#" class="header__category header__category__stories">HISTORIE PACJENTÓW</a>
         </div>
       </div>
-        <div class="header__content">
-          <div class="header__item1">
-            <div class="header__calculator">
-              <div class="header__calculator__title">Kalkulator BMI</div>
-              <div class="header__calculator__instruction">Oblicz swój wskaźnik BMI</div>
-              <div class="header__calculator__wrapper">
-                <div class="header__calculator__labels">
-                  <span class="header__calculator__gender-label">Płeć:</span>
-                  <span class="header__calculator__weight-label">Waga:</span>
-                  <span class="header__calculator__height-label">Wzrost:</span>
-                </div>
-                <div class="header__calculator__inputs">
-                  <span>
-                    <!-- input can be taken by checking which svg contains 2nd circle with the '--active' class -->
-                    <!-- but gender does not change the BMI formula -->
-                    <svg class="header__radio-svg" xmlns="http://www.w3.org/2000/svg" width="24.445" height="24.445"
-                      viewBox="0 0 24.445 24.445">
-                      <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
-                        <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
-                          stroke-miterlimit="10" stroke-width="1" />
-                        <circle class="header__radio-button--active" data-name="Ellipse 2" cx="4.689" cy="4.689"
-                          r="4.689" transform="translate(7.033 7.033)" fill="#fff" stroke="#fff" stroke-width="1" />
-                      </g>
-                    </svg>
-                    <span class="header__calculator__radio-text">K</span>
-                    <svg class="header__radio-svg" style="margin-left: 35px" xmlns="http://www.w3.org/2000/svg"
-                      width="24.445" height="24.445" viewBox="0 0 24.445 24.445">
-                      <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
-                        <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
-                          stroke-miterlimit="10" stroke-width="1" />
-                        <circle data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689" transform="translate(7.033 7.033)"
-                          fill="#fff" stroke="#fff" stroke-width="1" />
-                      </g>
-                    </svg>
-                    <span class="header__calculator__radio-text">M</span>
-                  </span>
-                  <span><input class="header__text-input header__user-weight" type="text">kg</span>
-                  <span><input class="header__text-input header__user-height" type="text">cm</span>
-                </div>
+      <div class="header__content">
+        <div class="header__item1">
+          <div class="header__calculator">
+            <div class="header__calculator__title">Kalkulator BMI</div>
+            <div class="header__calculator__instruction">Oblicz swój wskaźnik BMI</div>
+            <div class="header__calculator__wrapper">
+              <div class="header__calculator__labels">
+                <span class="header__calculator__gender-label">Płeć:</span>
+                <span class="header__calculator__weight-label">Waga:</span>
+                <span class="header__calculator__height-label">Wzrost:</span>
               </div>
-              <div class="header__calculator__button-container">
-                <div class="header__calculator__button-bmi">OBLICZ BMI</div>
+              <div class="header__calculator__inputs">
+                <span>
+                  <!-- input can be taken by checking which svg contains 2nd circle with the '--active' class -->
+                  <!-- but gender does not change the BMI formula -->
+                  <svg class="header__radio-svg" xmlns="http://www.w3.org/2000/svg" width="24.445" height="24.445"
+                    viewBox="0 0 24.445 24.445">
+                    <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
+                      <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
+                        stroke-miterlimit="10" stroke-width="1" />
+                      <circle class="header__radio-button--active" data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689"
+                        transform="translate(7.033 7.033)" fill="#fff" stroke="#fff" stroke-width="1" />
+                    </g>
+                  </svg>
+                  <span class="header__calculator__radio-text">K</span>
+                  <svg class="header__radio-svg" style="margin-left: 35px" xmlns="http://www.w3.org/2000/svg"
+                    width="24.445" height="24.445" viewBox="0 0 24.445 24.445">
+                    <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
+                      <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
+                        stroke-miterlimit="10" stroke-width="1" />
+                      <circle data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689" transform="translate(7.033 7.033)"
+                        fill="#fff" stroke="#fff" stroke-width="1" />
+                    </g>
+                  </svg>
+                  <span class="header__calculator__radio-text">M</span>
+                </span>
+                <span><input class="header__text-input header__user-weight" type="text">kg</span>
+                <span><input class="header__text-input header__user-height" type="text">cm</span>
               </div>
             </div>
-          </div>
-          <div class="header__item2">
-            <div class="header__image-container"></div>
+            <div class="header__calculator__button-container">
+              <div class="header__calculator__button-bmi">OBLICZ BMI</div>
+            </div>
           </div>
         </div>
+        <div class="header__item2">
+          <div class="header__image-container"></div>
+        </div>
       </div>
+      <a href="#about" class="header__arrow-container">
+        <svg class="header__next-section-arrow" xmlns="http://www.w3.org/2000/svg" width="77.775" height="47.483"
+          viewBox="0 0 77.775 47.483">
+          <path data-name="Path 200"
+            d="M1695.471,2477.837c.083-.1.157-.211.235-.315s.179-.235.263-.358.156-.253.232-.382c.066-.112.137-.221.2-.335.069-.13.129-.263.191-.4s.117-.239.168-.363.1-.26.143-.39.1-.264.14-.4.068-.263.1-.395.074-.276.1-.417.048-.305.069-.458c.018-.123.041-.245.054-.369a8.632,8.632,0,0,0,0-1.688c-.013-.13-.037-.256-.055-.383-.021-.148-.038-.3-.068-.444s-.069-.29-.106-.434c-.031-.126-.059-.253-.1-.377-.042-.142-.1-.279-.146-.417s-.085-.25-.136-.373-.117-.254-.178-.382-.114-.253-.181-.376-.141-.241-.213-.361-.139-.24-.216-.358c-.091-.134-.191-.262-.287-.39-.071-.093-.136-.189-.211-.281a8.567,8.567,0,0,0-.614-.67c-.013-.013-.024-.028-.038-.041l-30.29-30.291a8.555,8.555,0,0,0-12.1,12.1l23.893,24.282-23.811,24.283a8.556,8.556,0,0,0,12.1,12.1l30.29-30.291.02-.021C1695.116,2478.249,1695.3,2478.046,1695.471,2477.837Z"
+            transform="translate(2511.259 -1649.926) rotate(90)" />
+        </svg>
+      </a>
     </div>
+  </div>
 
   <div class="footer">
 
