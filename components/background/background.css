@@ -6,8 +6,13 @@
 }
 
 .background__small {
-  background-image: url("src/background.png");
+  background-image: url("src/background-2nd-layer.png");
   height: 2287px;
+  z-index: 2;
+}
+
+.background__small:after {
+  opacity: 0.25;
 }
 
 .background__large {

@@ -6,8 +6,14 @@
 }
 
 .background__small {
-  background-image: url("src/background.png");
+  position: relative;
+  background-image: url("src/background-2nd-layer.png");
   height: 2287px;
+  z-index: 2;
+}
+
+.background__small:after {
+  opacity: 0.25;
 }
 
 .background__large {
@@ -459,12 +465,14 @@
 }
 
 .header__image-container {
+  position: relative;
   background-image: url("src/header-image.png");
   background-repeat: no-repeat;
   background-position: 65%;
   max-width: 1183px;
   height: 934px;
   margin: 0 auto;
+  z-index: 0;
 }
 
 @media screen and (min-width: 1600px) {
@@ -517,4 +525,5 @@ body, html {
   padding: 0;
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
+  background-color: #eee8e6;
 }

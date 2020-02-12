@@ -6,9 +6,16 @@
   width: 100%
 
   &__small
-    background-image: url("src/background.png")
+    // background-image: url("src/background.png")
+    background-image: url("src/background-2nd-layer.png")
     height: 2287px
-  
+    z-index: 2
+    &:after
+     opacity: 0.25 
+
   &__large
     background-image: url("src/background-large.png") !important
     height: 5142px
+
+//TODO: background ma miec opacity fajnie
+//i byc na wierzchu
