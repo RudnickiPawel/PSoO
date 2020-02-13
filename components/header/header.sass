@@ -2,11 +2,15 @@
   display: flex
   flex-direction: column
   position: relative
+  width: 100%
   @media screen and ( max-width: 969px )
     margin: 0
     align-items: center
   a
     text-decoration: none
+  svg
+    cursor: pointer
+
 
   &__container
     display: flex
@@ -146,10 +150,11 @@
 
   &__content
     width: 100%
+    max-width: 1920px
     display: flex
-    margin: 30px 0 0 12.5%
+    // margin: 30px 0 0 12.5%
     @media (min-width: 1201px) and ( max-width: 1700px )
-      margin: 30px 0 0 7%
+      // margin: 30px 0 0 7%
     @media (min-width: 970px) and ( max-width: 1200px )
       margin: 30px 0 0 3%
     @media screen and ( max-width: 969px  )
@@ -162,9 +167,9 @@
         width: 38.38%
     &2
       @media (min-width: 970px) and ( max-width: 1200px )
-        width: 53%       
-      @media screen and ( min-width: 1200px )
-        width: 100%
+        width: 50%       
+      // media screen and ( min-width: 969px )
+      //   width: 100%
 
   &__calculator
     display: flex
@@ -181,7 +186,7 @@
     &__title
       font-size: 41px
       color: #0f65b1
-      width: 100%
+      // width: 100%
       text-align: left
       @media screen and ( max-width: 969px )
         text-align: center
@@ -193,10 +198,15 @@
       color: #4d4d4d
       margin: 29px 0 34px
       width: 100%
+      // media screen and ( max-width: 969px )
+      //   text-align: center
 
     &__wrapper
       width: 100%
       display: flex
+      // media screen and ( max-width: 969px )
+      //   position: relative
+      //   left: 19px
       
     &__labels
       font-size: 24px
@@ -214,6 +224,8 @@
       font-size: 24px
       font-weight: 300
       color: #4d4d4d
+      @media screen and ( max-width: 969px )
+        width: auto
 
     &__radio-text
       margin-left: 9px 
@@ -230,6 +242,7 @@
           color: #000
 
     &__button-bmi
+      z-index: 1
       font-size: 20px
       font-weight: 500
       letter-spacing: 1.4px
@@ -284,11 +297,12 @@
       position: absolute
       right: 0
       width: 53%
+      // width: 100%
       top: 146px
     @media (min-width: 970px) and ( max-width: 1400px)
       position: absolute
       right: 0
-      width: 50%
+      width: 60%
     @media (min-width: 800px) and (max-width: 969px)
       background-position: 100%
     @media screen and ( max-width: 450px )
@@ -312,5 +326,43 @@
     opacity: 0.85
     &:hover
       opacity: 1
+
+  &__calculator__output-block
+    display: none
+    width: 435px
+    height: 398.5px
+    @media screen and ( max-width: 969px )
+      width: 320px
+
+  &__calculator__wrapper2
+    display: flex
+    @media screen and ( max-width: 969px )
+      flex-direction: column
+      
+    
+  &__calculator__output
+    text-align: center
+
+  &__calculator__result
+    font-size: 20px
+    font-weight: 300
+    color: #4d4d4d
+    margin: 38px 0 60px
+    max-width: 360px
+    @media screen and ( max-width: 360px )
+      width: 320px
+      
+
+  &__calculator__button-output
+    margin: 0 auto
+    padding: 15px 20px 17px
+    font-size: 17px
+    font-weight: 500
+    letter-spacing: 1.19px
+    background-color: #897ac8
+    color: #fff
+    max-width: 208px
+
+
 
   //TODO: add BMI calculation and add display of output

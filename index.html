@@ -42,45 +42,57 @@
       <div class="header__content">
         <div class="header__item1">
           <div class="header__calculator">
-            <div class="header__calculator__title">Kalkulator BMI</div>
-            <div class="header__calculator__instruction">Oblicz swój wskaźnik BMI</div>
-            <div class="header__calculator__wrapper">
-              <div class="header__calculator__labels">
-                <span class="header__calculator__gender-label">Płeć:</span>
-                <span class="header__calculator__weight-label">Waga:</span>
-                <span class="header__calculator__height-label">Wzrost:</span>
+            <span class="header__calculator__wrapper3">
+              <div class="header__calculator__title">Kalkulator BMI</div>
+              <div class="header__calculator__instruction">Oblicz swój wskaźnik BMI</div>
+              <div class="header__calculator__wrapper">
+                <div class="header__calculator__labels">
+                  <span class="header__calculator__gender-label">Płeć:</span>
+                  <span class="header__calculator__weight-label">Waga:</span>
+                  <span class="header__calculator__height-label">Wzrost:</span>
+                </div>
+                <div class="header__calculator__inputs">
+                  <span>
+                    <!-- input can be taken by checking which svg contains 2nd circle with the '--active' class -->
+                    <!-- but gender does not change the BMI formula -->
+                    <svg class="header__radio-svg" xmlns="http://www.w3.org/2000/svg" width="24.445" height="24.445"
+                      viewBox="0 0 24.445 24.445">
+                      <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
+                        <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
+                          stroke-miterlimit="10" stroke-width="1" />
+                        <circle class="header__radio-button--active" data-name="Ellipse 2" cx="4.689" cy="4.689"
+                          r="4.689" transform="translate(7.033 7.033)" fill="#fff" stroke="#fff" stroke-width="1" />
+                      </g>
+                    </svg>
+                    <span class="header__calculator__radio-text">K</span>
+                    <svg class="header__radio-svg" style="margin-left: 35px" xmlns="http://www.w3.org/2000/svg"
+                      width="24.445" height="24.445" viewBox="0 0 24.445 24.445">
+                      <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
+                        <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
+                          stroke-miterlimit="10" stroke-width="1" />
+                        <circle data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689" transform="translate(7.033 7.033)"
+                          fill="#fff" stroke="#fff" stroke-width="1" />
+                      </g>
+                    </svg>
+                    <span class="header__calculator__radio-text">M</span>
+                  </span>
+                  <span><input class="header__text-input header__user-weight" type="text">kg</span>
+                  <span><input class="header__text-input header__user-height" type="text">cm</span>
+                </div>
               </div>
-              <div class="header__calculator__inputs">
-                <span>
-                  <!-- input can be taken by checking which svg contains 2nd circle with the '--active' class -->
-                  <!-- but gender does not change the BMI formula -->
-                  <svg class="header__radio-svg" xmlns="http://www.w3.org/2000/svg" width="24.445" height="24.445"
-                    viewBox="0 0 24.445 24.445">
-                    <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
-                      <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
-                        stroke-miterlimit="10" stroke-width="1" />
-                      <circle class="header__radio-button--active" data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689"
-                        transform="translate(7.033 7.033)" fill="#fff" stroke="#fff" stroke-width="1" />
-                    </g>
-                  </svg>
-                  <span class="header__calculator__radio-text">K</span>
-                  <svg class="header__radio-svg" style="margin-left: 35px" xmlns="http://www.w3.org/2000/svg"
-                    width="24.445" height="24.445" viewBox="0 0 24.445 24.445">
-                    <g class="header__radio-button" data-name="Group 12" transform="translate(0.5 0.5)">
-                      <circle data-name="Ellipse 1" cx="11.722" cy="11.722" r="11.722" fill="#fff" stroke="#897ac8"
-                        stroke-miterlimit="10" stroke-width="1" />
-                      <circle data-name="Ellipse 2" cx="4.689" cy="4.689" r="4.689" transform="translate(7.033 7.033)"
-                        fill="#fff" stroke="#fff" stroke-width="1" />
-                    </g>
-                  </svg>
-                  <span class="header__calculator__radio-text">M</span>
-                </span>
-                <span><input class="header__text-input header__user-weight" type="text">kg</span>
-                <span><input class="header__text-input header__user-height" type="text">cm</span>
+              <div class="header__calculator__message"></div>
+              <div class="header__calculator__button-container">
+                <div class="header__calculator__button-bmi">OBLICZ BMI</div>
               </div>
-            </div>
-            <div class="header__calculator__button-container">
-              <div class="header__calculator__button-bmi">OBLICZ BMI</div>
+            </span>
+            <div class="header__calculator__output-block">
+              <div class="header__calculator__wrapper2">
+                <div class="header__calculator__title">Twoje BMI to:&nbsp;</div><span class="header__calculator__output" style="font-size: 41px; color: #897ac8;"></span>
+              </div>
+              <div class="header__calculator__result">
+                Brawo! Jest to wartość prawidłowa.<br>Mimo wszystko nie zapominaj o aktywności fizycznej i zdrowej diecie.
+              </div>
+              <div class="header__calculator__button-output">OBLICZ PONOWNIE</div>
             </div>
           </div>
         </div>
