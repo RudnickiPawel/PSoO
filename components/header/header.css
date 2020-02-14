@@ -510,25 +510,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 1;
-}
-
-@media screen and (min-width: 1401px) {
-  .header__arrow-container {
-    margin-top: 160px;
-  }
-}
-
-@media (min-width: 970px) and (max-width: 1400px) {
-  .header__arrow-container {
-    margin-top: 250px;
-  }
-}
-
-@media screen and (max-width: 969px) {
-  .header__arrow-container {
-    position: relative;
-    bottom: 70px;
-  }
+  position: relative;
+  bottom: 70px;
 }
 
 .header__next-section-arrow {
