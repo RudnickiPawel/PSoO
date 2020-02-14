@@ -26,5 +26,3 @@ $(document).ready(function () {
     $('.header__calculator__wrapper3').show()
   });
 });
-
-//TODO: wyswietlic ladnie wynik
