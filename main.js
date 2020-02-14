@@ -14,7 +14,7 @@ $(document).ready(function () {
     if (!isNaN(weight) && !isNaN(height) && output!=Infinity) {
       output = output.replace(".", ",");
       $('.header__calculator__output').append(output);
-      $('.header__calculator__output-block').show()
+      $('.header__calculator__output-block').css('display', 'flex');
       $('.header__calculator__wrapper3').hide()
     }
     else
