@@ -5,6 +5,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 91px;
 }
 
 @media screen and (max-width: 969px) {
@@ -18,6 +19,7 @@
             align-items: center;
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 91px;
   }
 }
 
@@ -183,7 +185,6 @@
 @media screen and (max-width: 969px) {
   .about__text4 {
     margin-top: 30px;
-    margin-bottom: 50px;
   }
 }
 
