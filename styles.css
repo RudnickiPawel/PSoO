@@ -11,7 +11,7 @@
 .background__small {
   background-image: url("src/background.png");
   background-repeat: no-repeat;
-  height: 2287px;
+  height: 100% !important;
   z-index: 2;
 }
 
@@ -823,4 +823,5 @@ body, html {
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
   background-color: #eee8e6;
+  height: 100%;
 }

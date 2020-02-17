@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  //smoothly scrolling to next section
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+  });
 
   //Header, radio buttons
   $(".header__radio-button").on("click", function () {
