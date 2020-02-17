@@ -1,17 +1,14 @@
 .background {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   position: absolute;
   top: 0;
+  bottom: 0;
   pointer-events: none;
 }
 
 .background__small {
   background-image: url("src/background.png");
   background-repeat: no-repeat;
-  height: 100% !important;
   z-index: 2;
 }
 
@@ -724,12 +721,14 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 52%;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 969px) {
   .about__item2 {
     text-align: center;
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -818,10 +817,10 @@
 }
 
 body, html {
+  position: relative;
   max-width: 1920px;
   padding: 0;
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
   background-color: #eee8e6;
-  height: 100%;
 }

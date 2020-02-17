@@ -99,12 +99,14 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 52%;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 969px) {
   .about__item2 {
     text-align: center;
     width: 100%;
+    margin: 0;
   }
 }
 
