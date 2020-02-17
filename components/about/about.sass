@@ -1,12 +1,27 @@
 .about
   display: flex
   justify-content: center
+  @media screen and ( max-width: 969px )
+    flex-direction: column
+    align-items: center
+    width: 90%
+    margin: 0 auto
+
+  br
+    @media screen and (max-width: 1919px)
+      display: none
+
+  &__br-always-on
+    br
+      display: initial
 
   ul, li 
     list-style-position: outside
     margin: 0
     padding: 0
     padding-left: 18px
+    @media screen and ( max-width: 969px )
+      text-align: left
 
   li
     font-size: 13px
@@ -19,11 +34,16 @@
     display: flex
     justify-content: flex-end
     width: 48%
+    @media screen and ( max-width: 969px )
+      margin-bottom: 30px
+      width: 100%
 
   &__image-wrapper
     width: 100%
     max-width: 676px
     line-height: 1.67
+    @media screen and ( max-width: 969px )
+      max-width: none
 
   &__image
     width: 100%
@@ -34,12 +54,21 @@
     flex-direction: column
     flex-wrap: wrap
     width: 52%
-
+    @media screen and ( max-width: 969px )
+      text-align: center
+      width: 100%
+      
   &__wrapper2
-    width: 100%
+    width: calc(100% - 68px)
     max-width: 725px
-    margin-left: 48px
-
+    margin: 0 20px 0 48px
+    @media screen and ( min-width: 1920px )
+      width: 100%
+    @media screen and ( max-width: 969px )
+      margin: 0
+      width: 100%
+      max-width: none
+      
   &__size20-weight500
     font-size: 20px
     font-weight: 500
@@ -53,7 +82,15 @@
 
   &__text1
     line-height: 1.5
+    @media screen and ( max-width: 969px )
+      width: 100%
 
   &__text2
     margin-top: 70px
     line-height: 1.67
+    @media screen and ( max-width: 969px )
+      margin-top: 30px
+
+  &__text3
+    @media screen and ( max-width: 969px )
+      margin-bottom: 50px
