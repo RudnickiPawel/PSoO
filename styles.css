@@ -161,7 +161,7 @@
   }
 }
 
-.header__category:hover {
+.header__category:hover, .header__category--current {
   padding-bottom: 5px;
   border-bottom: solid 3px #897ac8;
 }
