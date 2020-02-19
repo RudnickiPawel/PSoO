@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  //in video, hiding arrow button when video is playing
+  $('.video__wrapper').on('click', function(){
+    var video = $(this).find(".video__player").get(0);
+
+    if ( video.paused ) {
+        $(this).find(".video__button").hide();
+    }
+  });
+
   //smoothly scrolling to next section
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));

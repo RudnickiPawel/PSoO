@@ -17,6 +17,11 @@
 }
 
 .background__large {
-  background-image: url("src/background-large.png") !important;
-  height: 5142px;
+  background-image: url("src/background-large.png");
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.background__large:after {
+  opacity: 0.25;
 }
