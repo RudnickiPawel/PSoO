@@ -14,14 +14,20 @@
   &__container
     display: flex
     position: relative
-    margin: 30px 12.5% 0
-    @media (min-width: 970px) and ( max-width: 1250px )
-      margin: 30px 3% 0
-    @media (min-width: 970px) and ( max-width: 1400px )
-      flex-direction: column
-      align-items: center
-    @media screen and ( max-width: 969px )
-      display: block
+    justify-content: space-between
+
+    &--landing-page  
+      margin: 30px 12.5% 0
+      @media (min-width: 970px) and ( max-width: 1250px )
+        margin: 30px 3% 0
+      @media (min-width: 970px) and ( max-width: 1400px )
+        flex-direction: column
+        align-items: center
+      @media screen and ( max-width: 969px )
+        display: block
+    &--about-page
+      margin: 66px 12.3% 0 11.9%
+      
 
   &__logo
     width: 246px
@@ -29,34 +35,44 @@
     @media screen and ( max-width: 1400px )
       position: relative
       left: 23px
-      
     @media screen and ( max-width: 969px )
       margin-top: 30px
 
+  &__logo-small
+    width: 327px
+    height: 60px
+    @media screen and ( max-width: 340px )
+      width: 100%
+      height: auto
+      
   &__categories-container
-    display: flex
-    justify-content: center
-    align-items: center
-    height: fit-content
-    margin: 0
-    margin-top: 39px
-    &--mt-0
-      margin-top: 0
-    
-    @media screen and ( min-width: 1700px )
-      position: absolute
-      right: 0
+    &--big-logo
+      display: flex
+      justify-content: center
+      align-items: center
+      height: fit-content
+      margin: 0
+      margin-top: 39px
+      @media screen and ( min-width: 1700px )
+        position: absolute
+        right: 0
+        z-index: 100
+      @media (min-width: 1401px) and ( max-width: 1700px )
+        position: absolute
+        z-index: 100
+        right: calc(50% - 600px)
+      @media screen and ( max-width: 969px )
+        flex-direction: column
+        margin-top: 50px
+        position: static
+
+    &--small-logo
       z-index: 100
-      
-    @media (min-width: 1401px) and ( max-width: 1700px )
-      position: absolute
-      z-index: 100
-      right: calc(50% - 600px)
-      
-    @media screen and ( max-width: 969px )
-      flex-direction: column
-      margin: 50px 0
-      position: static
+      display: flex
+      justify-content: center
+      align-items: center
+      height: fit-content
+      margin: 0
 
   &__category
     font-size: 20px
@@ -69,10 +85,51 @@
     padding-bottom: 8px
     @media (min-width: 970px) and ( max-width: 1700px )
       font-size: 16px
-    
     &:hover, &--current
-      padding-bottom: 5px
-      border-bottom: solid 3px #897ac8
+        padding-bottom: 5px !important
+        border-bottom: solid 3px #897ac8
+
+    &--no-hover-effect
+      display: flex
+      flex-direction: column
+      position: relative
+      padding-bottom: 8px
+      border: 0 !important
+      span
+        margin: 14px 0
+      &:hover
+        span
+          margin-top: 11px
+        .header__accordions-container
+          display: flex
+          flex-direction: column
+          max-width: 152px
+          position: absolute
+          top: 45px
+          z-index: 2
+          @media screen and ( max-width: 969px )
+            position: static
+        .header__svg-arrow2
+          transform: rotate(90deg)
+          transition: transform 0.5s
+      
+    &--small-logo
+      font-size: 20px
+      font-weight: 500
+      letter-spacing: 1.4px
+      color: #4d4d4d
+      padding-right: 5px
+      text-align: center
+      display: inline
+      padding-bottom: 8px
+      @media (min-width: 970px) and ( max-width: 1860px )
+        font-size: 16px
+      @media screen and ( max-width: 1860px )
+        //
+    
+      &:hover, &--current
+        padding-bottom: 5px
+        border-bottom: solid 3px #897ac8
       
     &__main
 
@@ -90,33 +147,7 @@
 
     &__stories
 
-    &--no-hover-effect
-      display: flex
-      flex-direction: column
-      position: relative
-      font-size: 20px
-      font-weight: 500
-      letter-spacing: 1.4px
-      color: #4d4d4d  
-      text-align: center
-      padding-bottom: 8px
-      @media (min-width: 970px) and ( max-width: 1700px )
-        font-size: 16px
-      span
-        margin: 14px 0
-      &:hover
-        .header__accordions-container
-          display: flex
-          flex-direction: column
-          max-width: 152px
-          position: absolute
-          top: 45px
-          z-index: 2
-          @media screen and ( max-width: 969px )
-            position: static
-        .header__svg-arrow2
-          transform: rotate(90deg)
-          transition: transform 0.5s
+    
             
   &__svg-arrow
     transition: transform 0.5s

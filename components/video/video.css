@@ -10,16 +10,17 @@
           align-items: center;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 46px;
+  margin: 77px 0 46px;
   z-index: 2;
 }
 
 .video__wrapper {
   position: relative;
   cursor: pointer;
-  width: 75%;
+  width: 100%;
   height: auto;
-  max-width: 1440px;
+  max-width: 1462px;
+  margin: 0 12.3% 0 11.9%;
 }
 
 @media screen and (max-width: 969px) {
