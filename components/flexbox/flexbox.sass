@@ -1,0 +1,54 @@
+.flexbox
+  display: flex
+  @media screen and ( max-width: 969px )
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+
+  &--about-section
+    justify-content: center
+    position: relative
+    right: 5px
+    line-height: 1.67
+    br
+      @media screen and (max-width: 1919px)
+        display: none
+    
+      
+
+  &__item
+    ul, li 
+      list-style-position: outside
+      margin: 0
+      padding: 0
+      padding-left: 18px
+      @media screen and ( max-width: 969px )
+        text-align: left
+    li
+      font-size: 13px
+      color: #897ac8
+    li span 
+      color: #000
+      font-size: 18px
+
+  &__item1
+    &--about-section
+      max-width: 943px
+      margin-right: 19px
+      order: 1
+      padding-left: 10px
+
+  &__item2
+    &--about-section
+      max-width: 500px
+      width: 100%
+      max-height: 857px
+      height: auto
+      order: 2
+
+  &__image
+    @media screen and ( max-width: 600px )
+      width: 100%
+      height: auto
+      

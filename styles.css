@@ -746,20 +746,7 @@
 }
 
 .about__br-always-on br {
-  display: initial;
-}
-
-.about ul, .about li {
-  list-style-position: outside;
-  margin: 0;
-  padding: 0;
-  padding-left: 18px;
-}
-
-@media screen and (max-width: 969px) {
-  .about ul, .about li {
-    text-align: left;
-  }
+  display: initial !important;
 }
 
 .about li {
@@ -862,6 +849,10 @@
   color: #897ac8;
 }
 
+.about__turn-gray {
+  color: #596060;
+}
+
 .about__text1 {
   line-height: 1.5;
 }
@@ -909,6 +900,11 @@
     font-size: 24px;
     max-width: 318px;
   }
+}
+
+.about__title {
+  font-size: 30px;
+  color: #0f65b1;
 }
 
 .footer {
@@ -1099,6 +1095,92 @@
   left: calc( 50% - 59px);
   top: calc( 50% - 59px);
   pointer-events: none;
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 969px) {
+  .flexbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+.flexbox--about-section {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  right: 5px;
+  line-height: 1.67;
+}
+
+@media screen and (max-width: 1919px) {
+  .flexbox--about-section br {
+    display: none;
+  }
+}
+
+.flexbox__item ul, .flexbox__item li {
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+  padding-left: 18px;
+}
+
+@media screen and (max-width: 969px) {
+  .flexbox__item ul, .flexbox__item li {
+    text-align: left;
+  }
+}
+
+.flexbox__item li {
+  font-size: 13px;
+  color: #897ac8;
+}
+
+.flexbox__item li span {
+  color: #000;
+  font-size: 18px;
+}
+
+.flexbox__item1--about-section {
+  max-width: 943px;
+  margin-right: 19px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding-left: 10px;
+}
+
+.flexbox__item2--about-section {
+  max-width: 500px;
+  width: 100%;
+  max-height: 857px;
+  height: auto;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .flexbox__image {
+    width: 100%;
+    height: auto;
+  }
 }
 
 body, html {

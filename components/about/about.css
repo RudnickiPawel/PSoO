@@ -30,20 +30,7 @@
 }
 
 .about__br-always-on br {
-  display: initial;
-}
-
-.about ul, .about li {
-  list-style-position: outside;
-  margin: 0;
-  padding: 0;
-  padding-left: 18px;
-}
-
-@media screen and (max-width: 969px) {
-  .about ul, .about li {
-    text-align: left;
-  }
+  display: initial !important;
 }
 
 .about li {
@@ -146,6 +133,10 @@
   color: #897ac8;
 }
 
+.about__turn-gray {
+  color: #596060;
+}
+
 .about__text1 {
   line-height: 1.5;
 }
@@ -193,4 +184,9 @@
     font-size: 24px;
     max-width: 318px;
   }
+}
+
+.about__title {
+  font-size: 30px;
+  color: #0f65b1;
 }
