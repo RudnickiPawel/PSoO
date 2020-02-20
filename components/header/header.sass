@@ -79,6 +79,9 @@
       margin: 0
       @media screen and ( max-width: 1550px )
         margin-top: 39px
+      @media screen and ( max-width: 969px )
+        flex-direction: column
+        
         
   &__category
     font-size: 20px
@@ -103,6 +106,8 @@
       border: 0 !important
       span
         margin: 14px 0
+        @media screen and ( max-width: 969px )
+          margin: 10px 0
       &:hover
         span
           margin-top: 11px
@@ -132,8 +137,10 @@
         font-size: 16px
       @media (min-width: 1551px) and ( max-width: 1650px )
         font-size: 14px
-      @media screen and ( max-width: 1150px )
+      @media (min-width: 970px) and ( max-width: 1150px )
         font-size: 14px
+      @media screen and ( max-width: 969px )
+        font-size: 20px
       &:hover, &--current
         padding-bottom: 5px
         border-bottom: solid 3px #897ac8
@@ -372,3 +379,6 @@
     background-color: #897ac8
     color: #fff
     max-width: 208px
+
+    //TODO: na Ipadzie przycisk na filmiku nie znika,
+    //      accordiony sie nie pokazuja
