@@ -190,3 +190,12 @@
   font-size: 30px;
   color: #0f65b1;
 }
+
+.about__title--centered {
+  width: 100%;
+  text-align: center;
+}
+
+.about__title--about--complications {
+  margin-bottom: 40px;
+}
