@@ -1262,6 +1262,13 @@
           justify-content: space-between;
 }
 
+@media screen and (max-width: 1200px) {
+  .flexbox__wrapper--about--complications {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .flexbox__item ul, .flexbox__item li {
   list-style-position: outside;
   margin: 0;
