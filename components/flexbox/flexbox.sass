@@ -15,6 +15,10 @@
     justify-content: center
     line-height: 1.67
     padding-top: 40px
+    @media screen and ( max-width: 969px )
+      flex-direction: column
+      align-items: center
+      
     br
       @media screen and (max-width: 1919px)
         display: none
@@ -105,9 +109,13 @@
     margin-bottom: 95px
     @media ( min-width: 970px ) and ( max-width: 1250px )
       width: 30%
-    @media screen and ( max-width: 969px )
+    @media (min-width: 451px) and ( max-width: 969px )
       width: 40%
       margin-bottom: 40px
+    @media screen and ( max-width: 450px )
+      width: 90%
+      margin-bottom: 20px
+      
 
   &__svg--about--complications--item1
     position: relative
