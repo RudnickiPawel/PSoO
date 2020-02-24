@@ -1,0 +1,32 @@
+.text--centered {
+  width: 100%;
+  text-align: center;
+}
+
+.text--size18 {
+  font-size: 18px;
+}
+
+.text--size20 {
+  font-size: 20px;
+}
+
+.text--size30 {
+  font-size: 30px;
+}
+
+.text--weight300 {
+  font-weight: 300;
+}
+
+.text--weight400 {
+  font-weight: 400;
+}
+
+.text--weight500 {
+  font-weight: 500;
+}
+
+.text--weight700 {
+  font-weight: 700;
+}

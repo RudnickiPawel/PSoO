@@ -18,7 +18,6 @@
     @media screen and ( max-width: 969px )
       flex-direction: column
       align-items: center
-      
     br
       @media screen and (max-width: 1919px)
         display: none
@@ -33,21 +32,18 @@
       flex-direction: row
       flex-wrap: wrap
       justify-content: space-around
-  &--about--complications
-    justify-content: center
-    width: 100%
-    // max-width: 1462px
-    // margin: 0 auto
 
   &__container
     display: flex
-    &--about--complications
+    &--centered
       justify-content: center
+    &--slick
+      //
 
   &__wrapper
     display: flex
     justify-content: center
-    align-items: center
+    align-items: top
     &--about--complications
       width: 100%
       max-width: 1462px
@@ -57,7 +53,6 @@
       @media screen and ( max-width: 1200px )
         justify-content: space-around
         
-
   &__item
     ul, li 
       list-style-position: outside
@@ -75,7 +70,10 @@
     &--about--complications
       width: 100%
       max-width: 400px
-      margin-bottom: 77px
+      text-align: center
+
+  &__item--slick
+    //
 
   &__item1
     &--about--about
@@ -84,6 +82,9 @@
       margin-right: 19px
       order: 1
       padding-left: 10px
+      @media screen and ( max-width: 969px )
+        text-align: center
+        
 
   &__item2
     &--about--about
@@ -97,15 +98,19 @@
         margin-bottom: 48px
 
   &__image
-    margin-top: 16px
-    @media screen and ( max-width: 969px )
-      margin-top: 0
-    @media screen and ( max-width: 600px )
-      width: 100%
-      height: auto
-    &--about--images
-      width: 100%
-      height: auto
+    // &--responsive
+    //   width: 100%
+    //   height: auto
+      
+
+    &--hand-image
+      margin-top: 16px
+      @media screen and ( max-width: 969px )
+        margin-top: 0
+      @media screen and ( max-width: 600px )
+        width: 100%
+        height: auto
+    
      
   &__image-container--about--images
     height: auto
@@ -119,8 +124,6 @@
       width: 90%
       margin-bottom: 20px
       
-
   &__svg--about--complications--item1
     position: relative
     right: 5px
-      

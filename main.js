@@ -1,10 +1,21 @@
 $(document).ready(function () {
+  //slick
+  $('.flexbox__container-slick').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 300,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+
   //in video, hiding arrow button when video is playing
   $('.video__wrapper').on('click', function(){
     var video = $(this).find(".video__player").get(0);
 
     if ( video.paused ) {
-        $(this).find(".video__button").hide();
+      $(this).find(".video__button").hide();
     }
   });
 
@@ -12,10 +23,10 @@ $(document).ready(function () {
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top
-        }, 1000);
+      event.preventDefault();
+      $('html, body').stop().animate({
+          scrollTop: target.offset().top
+      }, 1000);
     }
   });
 

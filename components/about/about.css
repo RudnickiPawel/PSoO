@@ -119,24 +119,6 @@
   }
 }
 
-.about__size20-weight500 {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.about__size18-weight300 {
-  font-size: 18px;
-  font-weight: 300;
-}
-
-.about__turn-violet {
-  color: #897ac8;
-}
-
-.about__turn-gray {
-  color: #596060;
-}
-
 .about__text1 {
   line-height: 1.5;
 }
@@ -184,18 +166,4 @@
     font-size: 24px;
     max-width: 318px;
   }
-}
-
-.about__title {
-  font-size: 30px;
-  color: #0f65b1;
-}
-
-.about__title--centered {
-  width: 100%;
-  text-align: center;
-}
-
-.about__title--about--complications {
-  margin-bottom: 40px;
 }
