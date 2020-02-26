@@ -1197,6 +1197,10 @@
           justify-content: center;
 }
 
+.flexbox__container--slick {
+  max-width: 1462px;
+}
+
 .flexbox__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1259,6 +1263,10 @@
   text-align: center;
 }
 
+.flexbox__item--slick {
+  width: 100%;
+}
+
 .flexbox__item1--about--about {
   z-index: 2;
   max-width: 943px;
@@ -1290,6 +1298,15 @@
   .flexbox__item2--about--about {
     margin-bottom: 48px;
   }
+}
+
+.flexbox__image--responsive {
+  width: 100%;
+  height: auto;
+}
+
+.flexbox__image--slick {
+  margin: 0 7px;
 }
 
 .flexbox__image--hand-image {

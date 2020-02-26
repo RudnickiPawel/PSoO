@@ -28,7 +28,7 @@
     margin-top: 46px
     width: 100%
     max-width: 1462px
-    @media screen and ( max-width: 969px )
+    @media screen and ( max-width: 969px)
       flex-direction: row
       flex-wrap: wrap
       justify-content: space-around
@@ -38,7 +38,13 @@
     &--centered
       justify-content: center
     &--slick
-      //
+      max-width: 1462px 
+      // display: flex
+      // justify-content: center
+      // align-items: center
+      // width: 100%
+
+      
 
   &__wrapper
     display: flex
@@ -73,7 +79,7 @@
       text-align: center
 
   &__item--slick
-    //
+    width: 100%
 
   &__item1
     &--about--about
@@ -98,9 +104,13 @@
         margin-bottom: 48px
 
   &__image
-    // &--responsive
-    //   width: 100%
-    //   height: auto
+    &--responsive
+      width: 100%
+      height: auto
+    &--slick
+      // height: 564px
+      // object-fit: contain
+      margin: 0 7px
       
 
     &--hand-image
@@ -127,3 +137,6 @@
   &__svg--about--complications--item1
     position: relative
     right: 5px
+
+    //TODO: te 3 obrazki nad sekcja complications maja nie nachodzic na siebie 
+    //oraz pasek fioletowy na dole nie ma byc czescia obrazka

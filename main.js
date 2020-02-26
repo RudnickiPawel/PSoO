@@ -1,31 +1,33 @@
 $(document).ready(function () {
   //slick
-  $('.flexbox__container-slick').slick({
+  $('.flexbox__container--slick').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    dots: false,
-    speed: 300,
-    variableWidth: true,
+    speed: 200,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    variableWidth: true
   });
 
   //in video, hiding arrow button when video is playing
-  $('.video__wrapper').on('click', function(){
+  $('.video__wrapper').on('click', function () {
     var video = $(this).find(".video__player").get(0);
 
-    if ( video.paused ) {
+    if (video.paused) {
       $(this).find(".video__button").hide();
     }
   });
 
   //smoothly scrolling to next section
-  $('a[href^="#"]').on('click', function(event) {
+  $('a[href^="#"]').on('click', function (event) {
     var target = $(this.getAttribute('href'));
-    if( target.length ) {
+    if (target.length) {
       event.preventDefault();
       $('html, body').stop().animate({
-          scrollTop: target.offset().top
+        scrollTop: target.offset().top
       }, 1000);
     }
   });
@@ -39,9 +41,9 @@ $(document).ready(function () {
   //when button to calculate bmi pressed
   $(".header__calculator__button-bmi").on("click", function () {
     var weight = parseFloat($('.header__user-weight').val()),
-        height = parseFloat($('.header__user-height').val() / 100);
-        output = (weight / (Math.pow(height, 2))).toFixed(2);
-    if (!isNaN(weight) && !isNaN(height) && output!=Infinity) {
+      height = parseFloat($('.header__user-height').val() / 100);
+    output = (weight / (Math.pow(height, 2))).toFixed(2);
+    if (!isNaN(weight) && !isNaN(height) && output != Infinity) {
       output = output.replace(".", ",");
       $('.header__calculator__output').append(output);
       $('.header__calculator__output-block').css('display', 'flex');
