@@ -22,6 +22,7 @@
       @media screen and (max-width: 1919px)
         display: none
   &--about--images
+    z-index: 2
     display: flex
     justify-content: space-between
     margin: 0 auto
@@ -37,14 +38,6 @@
     display: flex
     &--centered
       justify-content: center
-    &--slick
-      max-width: 1462px 
-      // display: flex
-      // justify-content: center
-      // align-items: center
-      // width: 100%
-
-      
 
   &__wrapper
     display: flex
@@ -78,19 +71,17 @@
       max-width: 400px
       text-align: center
 
-  &__item--slick
-    width: 100%
-
   &__item1
     &--about--about
       z-index: 2
       max-width: 943px
       margin-right: 19px
       order: 1
-      padding-left: 10px
-      @media screen and ( max-width: 969px )
-        text-align: center
+      @media screen and (max-width: 1470px)
+        padding-left: 10px
         
+      @media screen and ( max-width: 969px )
+        text-align: center 
 
   &__item2
     &--about--about
@@ -107,11 +98,6 @@
     &--responsive
       width: 100%
       height: auto
-    &--slick
-      // height: 564px
-      // object-fit: contain
-      margin: 0 7px
-      
 
     &--hand-image
       margin-top: 16px
@@ -121,8 +107,8 @@
         width: 100%
         height: auto
     
-     
   &__image-container--about--images
+    position: relative
     height: auto
     margin-bottom: 95px
     @media ( min-width: 970px ) and ( max-width: 1250px )
@@ -138,5 +124,16 @@
     position: relative
     right: 5px
 
-    //TODO: te 3 obrazki nad sekcja complications maja nie nachodzic na siebie 
-    //oraz pasek fioletowy na dole nie ma byc czescia obrazka
+  &__opacity-box
+    &--about--images
+      position: absolute
+      text-align: center
+      width: 100%
+      line-height: 1.75
+      opacity: 0.85
+      background-color: #897ac8
+      font-size: 20px
+      color: #fff
+      height: 101px
+      padding-top: 18px
+      bottom: 0

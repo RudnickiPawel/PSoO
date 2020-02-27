@@ -1,0 +1,74 @@
+.slick
+  display: flex
+  margin: 0 auto
+  &__images-container
+    width: fit-content
+    max-width: 1462px 
+    z-index: 1
+    display: flex
+    justify-content: space-between
+    object-fit: contain
+
+  &__item
+    position: relative
+
+  &__outside
+    display: initial
+    @media screen and ( max-width: 1499px )
+      display: none
+
+  &__inside
+    display: none
+    @media screen and ( max-width: 1499px )
+      display: initial
+      
+  // &__image
+    // width: 100%
+    // height: auto
+   
+  &__prev
+    margin-left: 8px
+    position: absolute
+    left: 0
+    top: calc(50% - 29px)
+    z-index: 2
+    fill: #fff
+    opacity: 0.85
+    &:hover
+      opacity: 1
+      fill: #897ac8
+
+  &__next
+    margin-right: 18px
+    position: absolute
+    right: 0
+    top: calc(50% - 29px)
+    z-index: 2
+    fill: #fff
+    opacity: 0.85
+    @media screen and (max-width: 1499px)   
+      margin-right: 8px
+    &:hover
+      opacity: 1
+      fill: #897ac8
+   
+  //styling slick arrows
+  .slick-prev:before 
+    content: "<"
+    color: red
+    font-size: 30px
+  .slick-next:before 
+    content: ">"
+    color: red
+    font-size: 30px
+
+  .slick-slide
+    margin: 0 7px
+
+  .slick-slide:not(.slick-current)
+    @media screen and (max-width: 1499px)    
+      visibility: hidden
+
+  .slick-list
+    @media screen and (max-width: 1500px) 
+      padding-left: 0 !important

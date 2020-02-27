@@ -1,16 +1,45 @@
 $(document).ready(function () {
   //slick
-  $('.flexbox__container--slick').slick({
+  $('.slick__images-container').slick({
+    draggable: true,
+    swipeToSlide: true,
     dots: false,
-    arrows: true,
+    arrows: false,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    speed: 200,
+    speed: 400,
     autoplay: true,
-    autoplaySpeed: 2000,
-    variableWidth: true
+    autoplaySpeed: 3000,
+    variableWidth: true,
+    slide: '.slick__item',
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          dots: false,
+          arrows: false,
+          infinite: true,
+          speed: 200,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          variableWidth: true,
+          slide: '.slick__item',
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true
+        }
+      },
+    ]
   });
+
+  //setting divs to be slick arrows
+  $('.slick__prev').click(function () {
+    $('.slick__images-container').slick('slickPrev');
+  });
+  $('.slick__next').click(function () {
+    $('.slick__images-container').slick('slickNext');
+  })
 
   //in video, hiding arrow button when video is playing
   $('.video__wrapper').on('click', function () {
