@@ -15,6 +15,7 @@
     justify-content: center
     line-height: 1.67
     padding-top: 40px
+    width: 100%
     @media screen and ( max-width: 969px )
       flex-direction: column
       align-items: center
@@ -70,29 +71,29 @@
       width: 100%
       max-width: 400px
       text-align: center
-
-  &__item1
-    &--about--about
+    
+    &--hand-image
       z-index: 2
-      max-width: 943px
-      margin-right: 19px
-      order: 1
-      @media screen and (max-width: 1470px)
-        padding-left: 10px
-        
-      @media screen and ( max-width: 969px )
-        text-align: center 
-
-  &__item2
-    &--about--about
-      z-index: 2
-      max-width: 500px
+      // max-width: 500px
       width: 100%
-      max-height: 857px
+      // max-height: 857px
       height: auto
       order: 2
       @media screen and ( max-width: 969px )
         margin-bottom: 48px
+
+  &__item1
+    &--about--about
+      z-index: 2
+      width: 100%
+      max-width: 943px
+      margin-right: 19px
+      order: 1
+        
+      @media screen and ( max-width: 969px )
+        text-align: center 
+      @media screen and ( max-width: 500px )
+        margin: 0
 
   &__image
     &--responsive
@@ -100,13 +101,18 @@
       height: auto
 
     &--hand-image
+      width: 100%
+      height: auto
       margin-top: 16px
       @media screen and ( max-width: 969px )
         margin-top: 0
-      @media screen and ( max-width: 600px )
-        width: 100%
-        height: auto
-    
+      // 2media screen and ( max-width: 500px )
+        
+        // // min-width: 320px
+        // width: 100px
+        // height: 500px
+        // object-fit: contain
+
   &__image-container--about--images
     position: relative
     height: auto
