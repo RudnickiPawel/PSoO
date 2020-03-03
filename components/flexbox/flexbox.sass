@@ -74,10 +74,10 @@
     
     &--hand-image
       z-index: 2
-      // max-width: 500px
       width: 100%
-      // max-height: 857px
+      max-width: 500px
       height: auto
+      max-height: 857px
       order: 2
       @media screen and ( max-width: 969px )
         margin-bottom: 48px
@@ -89,11 +89,12 @@
       max-width: 943px
       margin-right: 19px
       order: 1
-        
+      @media screen and (max-width: 1500px)
+        margin-left: 20px
       @media screen and ( max-width: 969px )
         text-align: center 
-      @media screen and ( max-width: 500px )
-        margin: 0
+      // @media screen and ( max-width: 500px )
+        // margin: 0
 
   &__image
     &--responsive
@@ -143,3 +144,12 @@
       height: 101px
       padding-top: 18px
       bottom: 0
+      @media (min-width: 451px) and ( max-width: 1249px )
+        height: 22%
+        
+      @media (min-width: 451px) and ( max-width: 650px )
+        font-size: 14px
+      @media screen and ( max-width: 450px )
+        font-size: 20px
+        
+        

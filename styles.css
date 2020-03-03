@@ -1264,7 +1264,9 @@
 .flexbox__item--hand-image {
   z-index: 2;
   width: 100%;
+  max-width: 500px;
   height: auto;
+  max-height: 857px;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -1286,15 +1288,15 @@
           order: 1;
 }
 
-@media screen and (max-width: 969px) {
+@media screen and (max-width: 1500px) {
   .flexbox__item1--about--about {
-    text-align: center;
+    margin-left: 20px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 969px) {
   .flexbox__item1--about--about {
-    margin: 0;
+    text-align: center;
   }
 }
 
@@ -1358,6 +1360,24 @@
   height: 101px;
   padding-top: 18px;
   bottom: 0;
+}
+
+@media (min-width: 451px) and (max-width: 1249px) {
+  .flexbox__opacity-box--about--images {
+    height: 22%;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 650px) {
+  .flexbox__opacity-box--about--images {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .flexbox__opacity-box--about--images {
+    font-size: 20px;
+  }
 }
 
 .margin-top38 {
