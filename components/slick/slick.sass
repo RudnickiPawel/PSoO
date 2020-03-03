@@ -2,7 +2,7 @@
   // display: flex
   //   margin: 0 auto
   @media screen and ( min-width: 1500px )
-    margin: 0 11.98% 0 11.87%
+    margin: 0 calc((100vw - 1460px)/2)
     
   &__images-container
       // width: fit-content
@@ -38,7 +38,7 @@
       
   &__image
     display: inline-block
-    width: auto
+    width: 100%
     min-width: 320px
     height: 564px
     min-height: 400px
@@ -51,6 +51,7 @@
       
     &--wide
       object-fit: cover
+      object-position: 50%
       @media ( min-width: 850px ) and (max-width:1499px )
         object-fit: contain
       @media (min-width: 1500px) and ( max-width: 1919px)

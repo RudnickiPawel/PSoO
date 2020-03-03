@@ -27,6 +27,7 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          variableWidth: false,
           centerMode: true
           // centerPadding: '0px',
 

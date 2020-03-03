@@ -1423,7 +1423,7 @@
 
 @media screen and (min-width: 1500px) {
   .slick {
-    margin: 0 11.98% 0 11.87%;
+    margin: 0 calc((100vw - 1460px)/2);
   }
 }
 
@@ -1445,7 +1445,7 @@
 
 .slick__image {
   display: inline-block;
-  width: auto;
+  width: 100%;
   min-width: 320px;
   height: 564px;
   min-height: 400px;
@@ -1470,6 +1470,8 @@
 .slick__image--wide {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50%;
+     object-position: 50%;
 }
 
 @media (min-width: 850px) and (max-width: 1499px) {
