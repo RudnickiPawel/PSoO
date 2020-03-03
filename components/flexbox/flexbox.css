@@ -73,6 +73,15 @@
   }
 }
 
+.flexbox--epidemiology {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 91px;
+  margin-bottom: 74px;
+}
+
 .flexbox__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,6 +154,12 @@
   width: 100%;
   max-width: 400px;
   text-align: center;
+}
+
+.flexbox__item--half {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .flexbox__item--hand-image {

@@ -34,11 +34,17 @@
       flex-direction: row
       flex-wrap: wrap
       justify-content: space-around
+  &--epidemiology
+    flex-direction: column
+    margin-top: 91px
+    margin-bottom: 74px
 
   &__container
     display: flex
     &--centered
       justify-content: center
+    &--epidemiology
+      //dodac marginy
 
   &__wrapper
     display: flex
@@ -71,6 +77,8 @@
       width: 100%
       max-width: 400px
       text-align: center
+    &--half
+      flex: 1
     
     &--hand-image
       z-index: 2
@@ -107,12 +115,9 @@
       margin-top: 16px
       @media screen and ( max-width: 969px )
         margin-top: 0
-      // 2media screen and ( max-width: 500px )
-        
-        // // min-width: 320px
-        // width: 100px
-        // height: 500px
-        // object-fit: contain
+      
+    &--epidemiology
+      //to be filled
 
   &__image-container--about--images
     position: relative
