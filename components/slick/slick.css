@@ -16,6 +16,10 @@
   z-index: 2;
 }
 
+.slick__wrapper--treatment {
+  position: relative;
+}
+
 .slick__item {
   width: -webkit-fit-content;
   width: -moz-fit-content;

@@ -49,7 +49,7 @@
     <!-- START video -->
     <div class="video">
       <div class="video__wrapper video__wrapper--about">
-        <video class="video__player" poster="../src/header-image-wide.png" playsinline controls>
+        <video onplay="hideButton(this)" class="video__player" poster="../src/header-image-wide.png" playsinline controls>
           <source src="../src/video1.mp4" type="video/mp4" />
         </video>
         <svg class="video__button" xmlns="http://www.w3.org/2000/svg" width="107" height="107" viewBox="0 0 107 107">

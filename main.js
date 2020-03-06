@@ -52,18 +52,6 @@ $(document).ready(function () {
     $('.slick__images-container').slick('slickNext');
   })
 
-  //in video, hiding arrow button when video is playing
-  var video_containers = [".video__wrapper", ".video__wrapper--treatment--big-video"];
-  for (var i = 0; i < video_containers.length; i++) {
-    $(video_containers[i]).on('click', function () {
-      var video = $(this).find(".video__player--treatment").get(0);
-      if (video.paused) {
-        $(this).find(".video__button").hide();
-      }
-    });
-  }
-
-
   //smoothly scrolling to next section
   $('a[href^="#"]').on('click', function (event) {
     var target = $(this.getAttribute('href'));
@@ -101,3 +89,7 @@ $(document).ready(function () {
     $('.header__calculator__wrapper3').show()
   });
 });
+
+function hideButton(input){
+  $(input.parentElement).find('svg').hide();
+}
