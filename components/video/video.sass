@@ -78,8 +78,9 @@
       height: 100%
       max-height: none
     &--treatment
+      z-index: 0
       max-width: 1156px
-      height: 651px
+      max-height: 651px
 
   &__button
     fill: #fff 
@@ -90,6 +91,7 @@
     left: calc( 50% - 59px ) 
     top: calc( 50% - 59px ) 
     pointer-events: none
+    z-index: 100
     &--treatment--small-video
       width: 17.3%
       height: 24.3%
@@ -117,6 +119,7 @@
     opacity: 0
     transition: opacity 0.5s
     &-background
+      pointer-events: none
       position: absolute
       top: 0
       bottom: 0

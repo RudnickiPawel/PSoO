@@ -1,5 +1,17 @@
 $(document).ready(function () {
   //slick
+  $('.slick--treatment').slick({
+    slidesToShow: 1,
+    speed: 300,
+    arrows: false
+  });
+
+  $('a[data-slide]').click(function(e) {
+    e.preventDefault();
+    var slideno = $(this).data('slide');
+    $('.slick--treatment').slick('slickGoTo', slideno - 1);
+  });
+
   $('.slick__images-container').slick({
     variableWidth: false,
     adaptiveHeight: false,

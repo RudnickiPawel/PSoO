@@ -131,8 +131,9 @@
 }
 
 .video__player--treatment {
+  z-index: 0;
   max-width: 1156px;
-  height: 651px;
+  max-height: 651px;
 }
 
 .video__button {
@@ -144,6 +145,7 @@
   left: calc( 50% - 59px);
   top: calc( 50% - 59px);
   pointer-events: none;
+  z-index: 100;
 }
 
 .video__button--treatment--small-video {
@@ -179,6 +181,7 @@
 }
 
 .video__hover-text-background {
+  pointer-events: none;
   position: absolute;
   top: 0;
   bottom: 0;
