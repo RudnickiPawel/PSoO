@@ -8,7 +8,11 @@
   &--treatment
     display: flex
     z-index: 2
-    margin: 0 12.3% 0 11.9%
+    margin: 0 auto
+    width: fit-content
+    @media screen and ( min-width: 1920px )
+      margin: 0 12.3% 0 11.9%
+      
   
   &__wrapper
     position: relative
@@ -29,41 +33,45 @@
         fill: #897ac8
         stroke: #897ac8
 
-  &__wrapper--treatment
-    display: flex
-    flex-direction: row
-    position: relative
-    cursor: pointer
-    width: 100%
-    height: auto
-    max-width: 1462px
-    // 
-    &--big-video
-      position: relative
-      width: 100%
-      max-width: 1156px
-      height: 100%
-      margin-right: 15px
-      &:hover
-        // for treatment view
-        .video__button
-          fill: #897ac8
-          stroke: #897ac8
-
-    &--column-of-videos
+    &--treatment
       display: flex
-      flex-direction: column
-      justify-content: space-between
-
-    &--small-video
+      flex-direction: row
       position: relative
-      min-width: 288px
-      min-height: 206px
-      &:hover
-        .video__button--treatment--small-video
-          display: none
-        .video__hover-text
-          opacity: 1
+      cursor: pointer
+      width: 100%
+      height: auto
+      max-width: 1462px
+      @media screen and ( max-width: 1464px )
+        width: calc(100vw - 303px)
+        margin-right: 15px
+
+      &--big-video
+        position: relative
+        width: 100%
+        max-width: 1156px
+        height: 100%
+        margin-right: 15px
+        &:hover
+          // for treatment view
+          .video__button
+            fill: #897ac8
+            stroke: #897ac8
+
+      &--column-of-videos
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        max-height: 651px
+
+      &--small-video
+        position: relative
+        width: 288px
+        height: 206px
+        &:hover
+          .video__button--treatment--small-video
+            display: none
+          .video__hover-text
+            opacity: 1
 
   &__player
     width: 100%
@@ -82,8 +90,8 @@
       z-index: 0
       width: 100%
       max-width: 1156px
-      height: 100%
-      max-height: 651px
+      height: 651px
+      object-fit: cover
 
   &__button
     fill: #fff 
@@ -141,5 +149,3 @@
     &3
       position: relative
       font-size: 11px
-    
-    //TODO: film przy klikaniu na start myszka ma chowac button na srodku filmiku
