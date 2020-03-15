@@ -10,14 +10,20 @@
   }
 }
 
+.slick--treatment {
+  position: relative;
+}
+
+@media (min-width: 970px) and (max-width: 1475px) {
+  .slick--treatment {
+    margin-right: 15px;
+  }
+}
+
 .slick__images-container {
   position: relative;
   max-width: 100vw;
   z-index: 2;
-}
-
-.slick__wrapper--treatment {
-  position: relative;
 }
 
 .slick__item {

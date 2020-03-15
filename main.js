@@ -1,4 +1,35 @@
 $(document).ready(function () {
+  // plyr
+  const players = Plyr.setup('video', {
+    controls: [
+      'rewind',
+      'play',
+      'fast-forward',
+      'progress',
+      'current-time',
+      'duration',
+      'mute',
+      'volume',
+      'settings',
+      'fullscreen',
+    ], 
+    clickToPlay: true,
+    listeners: {
+      play: function(){
+        //show/hide svg on plyr
+        if($('.video__button').css('display') == 'block')
+          $('.video__button').hide();
+        else
+          $('.video__button').show()
+      }
+    }
+  });
+
+  //fix for ipad accordions not showing
+  $('.header__category').on('click', function () {
+    $(this).children().show();
+  });
+
   //slick
   $('.slick--treatment').slick({
     slidesToShow: 1,
@@ -6,7 +37,7 @@ $(document).ready(function () {
     arrows: false
   });
 
-  $('a[data-slide]').click(function(e) {
+  $('a[data-slide]').click(function (e) {
     e.preventDefault();
     var slideno = $(this).data('slide');
     $('.slick--treatment').slick('slickGoTo', slideno - 1);
@@ -89,7 +120,3 @@ $(document).ready(function () {
     $('.header__calculator__wrapper3').show()
   });
 });
-
-function hideButton(input){
-  $(input.parentElement).find('svg').hide();
-}

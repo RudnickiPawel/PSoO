@@ -9,10 +9,65 @@
     display: flex
     z-index: 2
     margin: 0 auto
-    width: fit-content
+    // width: fit-content
     @media screen and ( min-width: 1920px )
       margin: 0 12.3% 0 11.9%
+    @media screen and ( max-width: 969px )
+      width: 100%
+      flex-direction: column
+    @media screen and ( max-width: 600px )
+      .video__button
+        transform: scale(0.5)
+    @media screen and ( max-width: 400px )
+      .plyr__progress__container
+        display: none !important
+      .plyr__time
+        margin-left: auto
+      .plyr__controls .plyr__controls__item:first-child
+          margin-right: 0 !important
+        
       
+    .plyr:fullscreen video
+      max-height: none
+      max-width: none
+      width: 100vw
+      object-fit: contain
+
+    .plyr--video
+      width: 100%
+
+    .plyr--playing video, .plyr--paused video
+      object-fit: contain
+
+    .plyr__video-wrapper
+      //making videos centered when they are playing
+      display: flex
+      align-items: center
+    
+      // --------- is this needed?
+    .slick-slide
+      width: 100%
+      max-width: 1156px
+      height: 100%
+      max-height: 651px
+
+    .slick__wrapper--treatment
+      position: relative
+      @media screen and (min-width: 970px)  
+        min-height: 651px
+
+    .slick-track
+      display: flex
+      @media screen and ( max-width: 969px )
+        height: fit-content
+
+    .slick-track .slick-slide 
+      display: flex
+      height: auto
+      align-items: center
+      justify-content: center
+      @media screen and (max-width: 969px) 
+        height: fit-content
   
   &__wrapper
     position: relative
@@ -41,16 +96,23 @@
       width: 100%
       height: auto
       max-width: 1462px
-      @media screen and ( max-width: 1464px )
+      @media (min-width: 970px) and ( max-width: 1464px )
         width: calc(100vw - 303px)
-        margin-right: 15px
-
+        // margin-right: 15px
+      @media screen and ( max-width: 969px )
+        order: 2
       &--big-video
         position: relative
-        width: 100%
+        width: calc(100% - 1px)
         max-width: 1156px
         height: 100%
-        margin-right: 15px
+        // margin-right: 15px
+        // @media (min-width: 970px) and ( max-width: 1300px )
+        //   display: flex
+        //   align-items: center
+          
+        // @media screen and ( max-width: 969px )
+        //   margin-right: 0
         &:hover
           // for treatment view
           .video__button
@@ -62,36 +124,54 @@
         flex-direction: column
         justify-content: space-between
         max-height: 651px
+        @media screen and ( max-width: 969px )
+          flex-direction: row
+          order: 1
+          margin-bottom: 20px
+          justify-content: space-around
+        @media screen and ( max-width: 680px )
+          flex-wrap: wrap
+          width: 100%
 
       &--small-video
         position: relative
         width: 288px
         height: 206px
+        margin-bottom: 17px
         &:hover
           .video__button--treatment--small-video
             display: none
           .video__hover-text
             opacity: 1
+            @media screen and ( max-width: 969px )
+              width: 100%
+              height: 100%
+        @media (min-width: 680px) and ( max-width: 969px )
+          width: 30%
+          height: auto
+        @media screen and ( max-width: 679px )
+          width: 216px
+          height: 154px
+          
 
   &__player
     width: 100%
     height: 100%
     max-height: 603px
-    object-fit: cover
+    object-fit: contain
     object-position: 65%
     @media (min-width: 970px) and ( max-width: 1550px )
       max-height: none
       height: 800px
     @media screen and (max-width: 969px)
-      width: 100%
-      height: 100%
       max-height: none
     &--treatment
-      z-index: 0
-      width: 100%
-      max-width: 1156px
-      height: 651px
       object-fit: cover
+
+      &1
+        max-width: 100vw !important
+        max-height: 78vw !important
+        object-fit: cover !important
 
   &__button
     fill: #fff 
@@ -126,9 +206,21 @@
     min-height: 146px 
     max-width: 194px
     color: #fff
-    padding: 25px 74px 35px 20px
+    // padding: 25px 74px 35px 20px
+    // top: 25px
+    // left: 20px
     opacity: 0
     transition: opacity 0.5s
+    @media (min-width: 970px)
+      padding: 25px 74px 35px 20px
+
+      
+    @media screen and ( max-width: 969px )
+      padding-right: 0
+      padding-bottom: 0
+      max-width: none
+      text-align: center
+      
     &-background
       pointer-events: none
       position: absolute
@@ -149,3 +241,5 @@
     &3
       position: relative
       font-size: 11px
+
+// TODO2: zainteresowac sie gulp, podobno 'gulp-autoprefixer' powinien byc uzywany

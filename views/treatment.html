@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link rel="stylesheet" type='text/css' href="../styles.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../node_modules/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" href="../node_modules/plyr/dist/plyr.css">
+  <link rel="stylesheet" type='text/css' href="../styles.css">
   <title>O Chorobie</title>
 </head>
 
@@ -52,37 +53,37 @@
         <div class="video__wrapper--treatment--big-video">
           <div class="slick--treatment">
             <div class="slick__wrapper--treatment">
-              <svg class="video__button" xmlns="http://www.w3.org/2000/svg" width="107" height="107"
+              <svg class="video__button video__button0" xmlns="http://www.w3.org/2000/svg" width="107" height="107"
                 viewBox="0 0 107 107">
                 <path
                   d="M987.225,452.852a51.873,51.873,0,1,0,51.875,51.873A51.874,51.874,0,0,0,987.225,452.852Zm26.045,54.272L993.8,518.366,974.324,529.61a2.77,2.77,0,0,1-4.154-2.4V482.239a2.77,2.77,0,0,1,4.154-2.4L993.8,491.084l19.474,11.243A2.769,2.769,0,0,1,1013.27,507.124Z"
                   transform="translate(-933.351 -450.852)" stroke-miterlimit="10" />
               </svg>
-              <video onplay="hideButton(this)" class="video__player--treatment video__player--treatment1"
+              <video class="video__player--treatment video__player--treatment1"
                 poster="../src/treatment-video-poster.png" id="player" playsinline controls>
                 <source src="../src/video1.mp4" type="video/mp4" />
               </video>
             </div>
             <div class="slick__wrapper--treatment">
-              <svg class="video__button" xmlns="http://www.w3.org/2000/svg" width="107" height="107"
+              <svg class="video__button video__button1" xmlns="http://www.w3.org/2000/svg" width="107" height="107"
                 viewBox="0 0 107 107">
                 <path
                   d="M987.225,452.852a51.873,51.873,0,1,0,51.875,51.873A51.874,51.874,0,0,0,987.225,452.852Zm26.045,54.272L993.8,518.366,974.324,529.61a2.77,2.77,0,0,1-4.154-2.4V482.239a2.77,2.77,0,0,1,4.154-2.4L993.8,491.084l19.474,11.243A2.769,2.769,0,0,1,1013.27,507.124Z"
                   transform="translate(-933.351 -450.852)" stroke-miterlimit="10" />
               </svg>
-              <video onplay="hideButton(this)" class="video__player--treatment video__player--treatment2" poster="../src/slick2.png" id="player"
+              <video class="video__player--treatment video__player--treatment2" poster="../src/slick2.png" id="player"
                 playsinline controls>
                 <source src="../src/video2.mp4" type="video/mp4" />
               </video>
             </div>
             <div class="slick__wrapper--treatment">
-              <svg class="video__button" xmlns="http://www.w3.org/2000/svg" width="107" height="107"
+              <svg class="video__button video__button2" xmlns="http://www.w3.org/2000/svg" width="107" height="107"
                 viewBox="0 0 107 107">
                 <path
                   d="M987.225,452.852a51.873,51.873,0,1,0,51.875,51.873A51.874,51.874,0,0,0,987.225,452.852Zm26.045,54.272L993.8,518.366,974.324,529.61a2.77,2.77,0,0,1-4.154-2.4V482.239a2.77,2.77,0,0,1,4.154-2.4L993.8,491.084l19.474,11.243A2.769,2.769,0,0,1,1013.27,507.124Z"
                   transform="translate(-933.351 -450.852)" stroke-miterlimit="10" />
               </svg>
-              <video onplay="hideButton(this)" class="video__player--treatment video__player--treatment3" poster="../src/slick2.png" id="player"
+              <video class="video__player--treatment video__player--treatment3" poster="../src/slick2.png" id="player"
                 playsinline controls>
                 <source src="../src/video3.mp4" type="video/mp4" />
               </video>
@@ -458,8 +459,7 @@
   <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="../main.js"></script>
   <script type="text/javascript" src="../node_modules/slick-carousel/slick/slick.min.js"></script>
+  <script type="text/javascript" src="../node_modules/plyr/dist/plyr.js"></script>
 </body>
 
 </html>
-
-<!-- TODO: Make player responsive -->
