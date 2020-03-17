@@ -5,6 +5,17 @@
   object-fit: cover
   margin: 74px 0 46px
   z-index: 2
+  .plyr:fullscreen video
+      max-height: none
+      max-width: none
+      width: 100vw
+      object-fit: contain
+
+  .plyr--video
+    width: 100%
+
+  .plyr--playing video, .plyr--paused video
+    object-fit: contain
   &--treatment
     display: flex
     z-index: 2
@@ -160,11 +171,17 @@
     max-height: 603px
     object-fit: contain
     object-position: 65%
+    @media screen and ( max-width: 1919px )
+      max-width: none
+      max-height: none
+      object-fit: cover
+      
     @media (min-width: 970px) and ( max-width: 1550px )
       max-height: none
       height: 800px
     @media screen and (max-width: 969px)
       max-height: none
+    
     &--treatment
       object-fit: cover
 
