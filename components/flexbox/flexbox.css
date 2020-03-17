@@ -16,6 +16,56 @@
   opacity: 0.39;
 }
 
+.flexbox--treatment--accordions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  border: 0;
+}
+
+.flexbox--treatment--accordions:hover {
+  padding-bottom: 5px;
+  margin-bottom: -2px;
+}
+
+.flexbox--treatment--accordions:hover .header__accordions-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 152px;
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 969px) {
+  .flexbox--treatment--accordions:hover .header__accordions-container {
+    position: static;
+  }
+}
+
+.flexbox--treatment--accordions:hover .header__svg-arrow2 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.flexbox--treatment--accordions:hover .header__category--small-logo--current--accordions {
+  border: none !important;
+}
+
 .flexbox--about--about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,6 +246,7 @@
 }
 
 .flexbox__item--about--complications {
+  z-index: 2;
   width: 100%;
   max-width: 400px;
   text-align: center;

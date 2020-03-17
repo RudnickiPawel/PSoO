@@ -10,6 +10,28 @@
     z-index: 1
     background-color: #ffffff
     opacity: 0.39
+  &--treatment--accordions
+    display: flex
+    flex-direction: column
+    position: relative
+    border: 0
+    &:hover
+      padding-bottom: 5px
+      margin-bottom: -2px
+      .header__accordions-container
+        display: flex
+        flex-direction: column
+        max-width: 152px
+        position: absolute
+        top: 25px
+        z-index: 2
+        @media screen and ( max-width: 969px )
+          position: static
+      .header__svg-arrow2
+        transform: rotate(90deg)
+        transition: transform 0.5s
+      .header__category--small-logo--current--accordions
+        border: none !important
   &--about--about
     display: flex
     justify-content: center
@@ -92,6 +114,7 @@
       color: #000
       font-size: 18px
     &--about--complications
+      z-index: 2
       width: 100%
       max-width: 400px
       text-align: center
