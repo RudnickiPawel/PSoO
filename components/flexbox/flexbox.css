@@ -269,7 +269,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: relative;
+  position: relative;
 }
 
 .flexbox__item--hand-image {
@@ -340,6 +340,12 @@
     width: 100%;
     height: auto;
   }
+}
+
+.flexbox__image--epidemiology--treatment-section {
+  width: 100%;
+  height: auto;
+  max-width: 682px;
 }
 
 .flexbox__image-container--about--images {

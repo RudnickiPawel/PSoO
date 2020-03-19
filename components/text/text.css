@@ -1,3 +1,20 @@
+.text__ul-inside {
+  list-style-position: inside;
+  padding-left: 0;
+  font-size: 13px;
+}
+
+.text__ul-inside li {
+  font-size: 13px;
+  color: #897ac8;
+  text-align: -webkit-match-parent;
+}
+
+.text__ul-inside li span {
+  color: #000;
+  font-size: 18px;
+}
+
 .text--centered {
   width: 100%;
   text-align: center;

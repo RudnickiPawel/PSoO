@@ -1807,7 +1807,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: relative;
+  position: relative;
 }
 
 .flexbox__item--hand-image {
@@ -1880,6 +1880,12 @@
   }
 }
 
+.flexbox__image--epidemiology--treatment-section {
+  width: 100%;
+  height: auto;
+  max-width: 682px;
+}
+
 .flexbox__image-container--about--images {
   position: relative;
   margin-bottom: 95px;
@@ -1933,6 +1939,14 @@
   }
 }
 
+.margin0 {
+  margin: 0 !important;
+}
+
+.margin-top140 {
+  margin-top: 140px !important;
+}
+
 .margin-top90 {
   margin-top: 90px;
 }
@@ -1965,6 +1979,10 @@
   margin-bottom: 38px;
 }
 
+.margin-bottom30 {
+  margin-bottom: 30px;
+}
+
 .color-blue {
   color: #0f65b1;
 }
@@ -1979,6 +1997,23 @@
 
 .color-semi-black {
   color: #4d4d4d;
+}
+
+.text__ul-inside {
+  list-style-position: inside;
+  padding-left: 0;
+  font-size: 13px;
+}
+
+.text__ul-inside li {
+  font-size: 13px;
+  color: #897ac8;
+  text-align: -webkit-match-parent;
+}
+
+.text__ul-inside li span {
+  color: #000;
+  font-size: 18px;
 }
 
 .text--centered {
@@ -2172,9 +2207,4 @@ body, html {
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
   background-color: #eee8e6;
-}
-
-video::-webkit-media-controls, video::-webkit-media-controls-panel, video::-webkit-media-controls-overlay-play-button, video::-internal-media-controls-download-button, video::-webkit-media-controls-start-playback-button {
-  display: none !important;
-  -webkit-appearance: none;
 }
