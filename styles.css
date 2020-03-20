@@ -359,6 +359,11 @@
   border-bottom: solid 3px #897ac8;
 }
 
+.header__category--small-logo--pink-underline:hover {
+  padding-bottom: 5px;
+  border-bottom: solid 3px #c52089;
+}
+
 .header__category--small-logo--current--accordions {
   font-size: 20px;
   font-weight: 500;
@@ -395,6 +400,10 @@
   }
 }
 
+.header__category--small-logo--current--accordions--pink-underline {
+  border-bottom: solid 3px #c52089;
+}
+
 .header__category__about {
   margin: 14px 0;
 }
@@ -427,6 +436,10 @@
   margin-left: 11px;
 }
 
+.header__svg-arrow--sources {
+  fill: #c52089;
+}
+
 .header__additional-container {
   padding: 0 12px;
 }
@@ -451,6 +464,11 @@
 .header__accordion:hover {
   padding-bottom: 8px;
   border-bottom: solid 1px #897ac8;
+}
+
+.header__accordion--pink-underline:hover {
+  padding-bottom: 8px;
+  border-bottom: solid 1px #c52089;
 }
 
 .header__content {
@@ -1554,6 +1572,28 @@
   opacity: 0.39;
 }
 
+.flexbox--sources {
+  max-width: 1455px;
+  margin: 0 auto;
+  margin-bottom: 65px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 3;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .flexbox--sources {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .flexbox--treatment--description {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1706,6 +1746,36 @@
   }
 }
 
+.flexbox__container--epidemiology-image--treatment-section {
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .flexbox__container--epidemiology-image--treatment-section {
+    margin: 40px 0;
+  }
+}
+
+.flexbox__container--source {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 349px;
+  height: 251px;
+  background-image: url("src/sources-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 349px) {
+  .flexbox__container--source {
+    width: 100vw;
+    background-size: cover;
+    background-position: 50%;
+  }
+}
+
 .flexbox__container--epidemiology {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1759,11 +1829,18 @@
   max-width: 709px;
   line-height: 1.67;
   margin-left: auto;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 1500px) {
+  .flexbox__wrapper--epidemiology-text br {
+    display: none;
+  }
 }
 
 @media (min-width: 1201px) and (max-width: 1500px) {
   .flexbox__wrapper--epidemiology-text {
-    margin-left: 20px;
+    margin-left: 67px;
   }
 }
 
@@ -1807,6 +1884,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  z-index: 3;
   position: relative;
 }
 
@@ -1951,6 +2029,10 @@
   margin-top: 90px;
 }
 
+.margin-top45 {
+  margin-top: 45px;
+}
+
 .margin-top38 {
   margin-top: 38px;
 }
@@ -1977,6 +2059,10 @@
 
 .margin-bottom38 {
   margin-bottom: 38px;
+}
+
+.margin-bottom37 {
+  margin-bottom: 37px;
 }
 
 .margin-bottom30 {

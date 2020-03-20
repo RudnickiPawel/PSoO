@@ -315,6 +315,11 @@
   border-bottom: solid 3px #897ac8;
 }
 
+.header__category--small-logo--pink-underline:hover {
+  padding-bottom: 5px;
+  border-bottom: solid 3px #c52089;
+}
+
 .header__category--small-logo--current--accordions {
   font-size: 20px;
   font-weight: 500;
@@ -351,6 +356,10 @@
   }
 }
 
+.header__category--small-logo--current--accordions--pink-underline {
+  border-bottom: solid 3px #c52089;
+}
+
 .header__category__about {
   margin: 14px 0;
 }
@@ -383,6 +392,10 @@
   margin-left: 11px;
 }
 
+.header__svg-arrow--sources {
+  fill: #c52089;
+}
+
 .header__additional-container {
   padding: 0 12px;
 }
@@ -407,6 +420,11 @@
 .header__accordion:hover {
   padding-bottom: 8px;
   border-bottom: solid 1px #897ac8;
+}
+
+.header__accordion--pink-underline:hover {
+  padding-bottom: 8px;
+  border-bottom: solid 1px #c52089;
 }
 
 .header__content {

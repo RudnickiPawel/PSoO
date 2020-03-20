@@ -148,6 +148,10 @@
       &:hover, &--current
         padding-bottom: 5px
         border-bottom: solid 3px #897ac8
+      &--pink-underline
+        &:hover
+          padding-bottom: 5px
+          border-bottom: solid 3px #c52089
       &--current--accordions
         font-size: 20px
         font-weight: 500
@@ -166,6 +170,9 @@
           font-size: 14px
         @media screen and ( max-width: 969px )
           font-size: 20px
+        &--pink-underline
+          border-bottom: solid 3px #c52089
+          
     &__main
 
     &__about
@@ -187,6 +194,8 @@
     position: relative
     fill: #897ac8
     margin-left: 11px
+    &--sources
+      fill: #c52089
 
   &__additional-container
     padding: 0 12px
@@ -204,6 +213,10 @@
     &:hover
       padding-bottom: 8px
       border-bottom: solid 1px #897ac8
+    &--pink-underline
+      &:hover
+        padding-bottom: 8px
+        border-bottom: solid 1px #c52089
 
   &__content
     width: 100%
