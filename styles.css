@@ -42,6 +42,18 @@
           align-items: center;
 }
 
+.background--source {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  background-color: #897ac8;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1762,10 +1774,21 @@
   display: flex;
   width: 349px;
   height: 251px;
+  text-align: center;
   background-image: url("src/sources-image.png");
   background-size: contain;
   background-repeat: no-repeat;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 0;
+}
+
+.flexbox__container--source:hover .background--source, .flexbox__container--source:hover .flexbox__wrapper--source {
+  opacity: 0;
+}
+
+.flexbox__container--source:hover .flexbox__wrapper--source-button {
+  opacity: 1;
 }
 
 @media screen and (max-width: 349px) {
@@ -1802,6 +1825,48 @@
   -webkit-box-align: top;
       -ms-flex-align: top;
           align-items: top;
+}
+
+.flexbox__wrapper--source {
+  z-index: 3;
+  padding-top: 43px;
+  padding-bottom: 35px;
+  width: 100%;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.flexbox__wrapper--source-text {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.flexbox__wrapper--source-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 208px;
+  height: 54px;
+  background-color: #897ac8;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  color: #ffffff;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .flexbox__wrapper--about--complications {
@@ -2069,6 +2134,10 @@
   margin-bottom: 30px;
 }
 
+.margin-bottom29 {
+  margin-bottom: 29px;
+}
+
 .color-blue {
   color: #0f65b1;
 }
@@ -2083,6 +2152,10 @@
 
 .color-semi-black {
   color: #4d4d4d;
+}
+
+.color-white {
+  color: #ffffff;
 }
 
 .text__ul-inside {
@@ -2121,6 +2194,10 @@
 
 .text--size30 {
   font-size: 30px;
+}
+
+.text--size40 {
+  font-size: 40px;
 }
 
 .text--weight300 {
