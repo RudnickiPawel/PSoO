@@ -467,6 +467,11 @@
   margin-bottom: 95px;
 }
 
+.flexbox__image-container--about--images--one-row {
+  position: relative;
+  margin-top: 46px;
+}
+
 @media screen and (min-width: 1250px) {
   .flexbox__image-container--about--images:nth-last-child(1) {
     margin-right: 230px;
