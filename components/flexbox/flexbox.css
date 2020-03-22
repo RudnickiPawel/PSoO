@@ -213,6 +213,7 @@
   margin-bottom: 30px;
   position: relative;
   z-index: 0;
+  text-decoration: none;
 }
 
 .flexbox__container--source:hover .background--source, .flexbox__container--source:hover .flexbox__wrapper--source {
