@@ -1,44 +1,47 @@
 $(document).ready(function () {
-  require.config({
-    paths: {
-      gmaps: '//maps.googleapis.com/maps/api/js?key=YOUR_API_KEY'
-    },
-    shim: {
-      gmaps: {
-        exports: 'google.maps'
+  if($('.flexbox__container--specialist').get(0) != undefined)
+  {
+    require.config({
+      paths: {
+        gmaps: '//maps.googleapis.com/maps/api/js?key=YOUR_API_KEY'
+      },
+      shim: {
+        gmaps: {
+          exports: 'google.maps'
+        }
       }
-    }
-  });
-
-  require(['gmaps'], function (gmaps) {
-    function clearOverlays() {
-      for (var i = 0; i < markers.length; i++ ) {
-        markers[i].setMap(null);
-      }
-      markers.length = 0;
-    }
-
-    markers = [];
-    var center = { lat: 53.770258, lng: 20.479574 };
-    var map = new gmaps.Map(document.getElementById('map1'), {
-      center: center,
-      zoom: 8
     });
-    Lat = [53.770258, 53.696104, 52.219737, 50.063019, 51.757281];
-    Lng = [20.479574, 19.964804, 20.983715, 19.927942, 19.457086];
-    Titles = ["Miejski Szpital Zespolony", "Dietetyk Naturhouse", "Centrum Leczenia Otyłości NZOZ Saba", "Centrum Leczenia Otyłości", "Bossamed"];
-    $(".flexbox__button--specialist").each(function(index){
-      $(".flexbox__button--specialist"+(index+1)).click(function () {
-        clearOverlays();
-        lat = Lat[index];
-        lng = Lng[index];
-        map.setCenter(new gmaps.LatLng(lat, lng));
-        markers.push(new gmaps.Marker({ position: {lat, lng}, map: map, title: Titles[index]}));
+  
+    require(['gmaps'], function (gmaps) {
+      function clearOverlays() {
+        for (var i = 0; i < markers.length; i++ ) {
+          markers[i].setMap(null);
+        }
+        markers.length = 0;
+      }
+  
+      markers = [];
+      var center = { lat: 53.770258, lng: 20.479574 };
+      var map = new gmaps.Map(document.getElementById('map1'), {
+        center: center,
+        zoom: 8
       });
-    });
-    $(".flexbox__button--specialist1").click(); //initiate the first one
-  });
-
+      Lat = [53.770258, 53.696104, 52.219737, 50.063019, 51.757281];
+      Lng = [20.479574, 19.964804, 20.983715, 19.927942, 19.457086];
+      Titles = ["Miejski Szpital Zespolony", "Dietetyk Naturhouse", "Centrum Leczenia Otyłości NZOZ Saba", "Centrum Leczenia Otyłości", "Bossamed"];
+      $(".flexbox__button--specialist").each(function(index){
+        $(".flexbox__button--specialist"+(index+1)).click(function () {
+          clearOverlays();
+          lat = Lat[index];
+          lng = Lng[index];
+          map.setCenter(new gmaps.LatLng(lat, lng));
+          markers.push(new gmaps.Marker({ position: {lat, lng}, map: map, title: Titles[index]}));
+        });
+      });
+      $(".flexbox__button--specialist1").click(); //initiate the first one
+    });  
+  }
+  
   // plyr
   const players = Plyr.setup('video', {
     controls: [
