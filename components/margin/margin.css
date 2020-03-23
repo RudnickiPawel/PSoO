@@ -10,6 +10,10 @@
   margin-top: 90px;
 }
 
+.margin-top50 {
+  margin-top: 50px;
+}
+
 .margin-top45 {
   margin-top: 45px;
 }
@@ -20,6 +24,14 @@
 
 .margin-top30 {
   margin-top: 30px;
+}
+
+.margin-top8 {
+  margin-top: 8px;
+}
+
+.margin-bottom95 {
+  margin-bottom: 95px;
 }
 
 .margin-bottom77 {
@@ -52,4 +64,12 @@
 
 .margin-bottom29 {
   margin-bottom: 29px;
+}
+
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+
+.margin-bottom10 {
+  margin-bottom: 10px;
 }

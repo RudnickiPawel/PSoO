@@ -26,6 +26,16 @@
   opacity: 0.25;
 }
 
+.background--gmap {
+  background-image: url("src/background-gmap.png");
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.background--gmap::after {
+  opacity: 0.25;
+}
+
 .background--about--complications {
   height: 120px;
   width: 120px;
@@ -1571,6 +1581,38 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  z-index: 3;
+}
+
+@media screen and (max-width: 1500px) {
+  .flexbox--gmap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.flexbox #map1 {
+  margin-right: 8px;
+  border: solid 4px #a5cebb;
+  max-width: 890px;
+  width: 890px;
+  max-height: 739px;
+  height: 739px;
+}
+
+@media screen and (max-width: 898px) {
+  .flexbox #map1 {
+    width: calc(100vw - 8px);
+    margin-right: 0;
+  }
 }
 
 .flexbox__lighter-background {
@@ -1736,10 +1778,92 @@
   width: 100%;
 }
 
+.flexbox__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexbox__button--specialist {
+  height: 30px;
+  width: 131px;
+  margin-right: 20px;
+  margin-left: auto;
+  background-color: #897ac8;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.77px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1500px) {
+  .flexbox__button--specialist {
+    margin: 0 auto;
+  }
+}
+
 .flexbox__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flexbox__container--gmaps-locations-details {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 513px;
+  margin-right: 45px;
+  padding-right: 23px;
+  max-height: 747px;
+}
+
+@media screen and (max-width: 1500px) {
+  .flexbox__container--gmaps-locations-details {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 898px;
+    overflow-y: hidden;
+    overflow-x: overlay;
+    padding: 0;
+    margin-right: 0;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 898px) {
+  .flexbox__container--gmaps-locations-details {
+    width: 100vw;
+  }
+}
+
+.flexbox__container--gmaps-locations-details::-webkit-scrollbar {
+  width: 11px;
+}
+
+.flexbox__container--gmaps-locations-details::-webkit-scrollbar-thumb {
+  background-color: #897ac8;
+}
+
+.flexbox__container--gmaps-locations-details::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.flexbox__container--specialist {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flexbox__container--centered {
@@ -1870,6 +1994,17 @@
   transition: opacity 0.5s;
 }
 
+.flexbox__wrapper--specialist {
+  width: 1487px;
+}
+
+@media screen and (max-width: 1500px) {
+  .flexbox__wrapper--specialist {
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .flexbox__wrapper--about--complications {
   width: 100%;
   max-width: 1462px;
@@ -1968,6 +2103,18 @@
 @media screen and (max-width: 969px) {
   .flexbox__item--hand-image {
     margin-bottom: 48px;
+  }
+}
+
+.flexbox__item--specialist {
+  border-bottom: solid 1px #a5cebb;
+}
+
+@media screen and (max-width: 1500px) {
+  .flexbox__item--specialist {
+    margin: 0 3%;
+    display: inline-block;
+    width: 100%;
   }
 }
 
@@ -2100,6 +2247,10 @@
   margin-top: 90px;
 }
 
+.margin-top50 {
+  margin-top: 50px;
+}
+
 .margin-top45 {
   margin-top: 45px;
 }
@@ -2110,6 +2261,14 @@
 
 .margin-top30 {
   margin-top: 30px;
+}
+
+.margin-top8 {
+  margin-top: 8px;
+}
+
+.margin-bottom95 {
+  margin-bottom: 95px;
 }
 
 .margin-bottom77 {
@@ -2144,6 +2303,14 @@
   margin-bottom: 29px;
 }
 
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+
+.margin-bottom10 {
+  margin-bottom: 10px;
+}
+
 .color-blue {
   color: #0f65b1;
 }
@@ -2164,6 +2331,10 @@
   color: #ffffff;
 }
 
+.color-pink {
+  color: #d078a0;
+}
+
 .text__ul-inside {
   list-style-position: inside;
   padding-left: 0;
@@ -2179,6 +2350,14 @@
 .text__ul-inside li span {
   color: #000;
   font-size: 18px;
+}
+
+.text--line-height1x6 {
+  line-height: 1.6;
+}
+
+.text--line-height1x92 {
+  line-height: 1.92;
 }
 
 .text--centered {

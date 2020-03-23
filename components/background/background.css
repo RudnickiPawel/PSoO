@@ -26,6 +26,16 @@
   opacity: 0.25;
 }
 
+.background--gmap {
+  background-image: url("src/background-gmap.png");
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.background--gmap::after {
+  opacity: 0.25;
+}
+
 .background--about--complications {
   height: 120px;
   width: 120px;

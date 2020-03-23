@@ -1,4 +1,44 @@
 $(document).ready(function () {
+  require.config({
+    paths: {
+      gmaps: '//maps.googleapis.com/maps/api/js?key=AIzaSyDmpSQJyP2OyFEDoSuvPQMRHTtMamjAMnA'
+    },
+    shim: {
+      gmaps: {
+        exports: 'google.maps'
+      }
+    }
+  });
+
+  require(['gmaps'], function (gmaps) {
+    function clearOverlays() {
+      for (var i = 0; i < markers.length; i++ ) {
+        markers[i].setMap(null);
+      }
+      markers.length = 0;
+    }
+
+    markers = [];
+    var center = { lat: 53.770258, lng: 20.479574 };
+    var map = new gmaps.Map(document.getElementById('map1'), {
+      center: center,
+      zoom: 8
+    });
+    Lat = [53.770258, 53.696104, 52.219737, 50.063019, 51.757281];
+    Lng = [20.479574, 19.964804, 20.983715, 19.927942, 19.457086];
+    Titles = ["Miejski Szpital Zespolony", "Dietetyk Naturhouse", "Centrum Leczenia Otyłości NZOZ Saba", "Centrum Leczenia Otyłości", "Bossamed"];
+    $(".flexbox__button--specialist").each(function(index){
+      $(".flexbox__button--specialist"+(index+1)).click(function () {
+        clearOverlays();
+        lat = Lat[index];
+        lng = Lng[index];
+        map.setCenter(new gmaps.LatLng(lat, lng));
+        markers.push(new gmaps.Marker({ position: {lat, lng}, map: map, title: Titles[index]}));
+      });
+    });
+    $(".flexbox__button--specialist1").click(); //initiate the first one
+  });
+
   // plyr
   const players = Plyr.setup('video', {
     controls: [
@@ -12,12 +52,12 @@ $(document).ready(function () {
       'volume',
       'settings',
       'fullscreen',
-    ], 
+    ],
     clickToPlay: true,
     listeners: {
-      play: function(){
+      play: function () {
         //show/hide svg on plyr
-        if($('.video__button').css('display') == 'block')
+        if ($('.video__button').css('display') == 'block')
           $('.video__button').hide();
         else
           $('.video__button').show()
@@ -120,3 +160,8 @@ $(document).ready(function () {
     $('.header__calculator__wrapper3').show()
   });
 });
+// function initMap() {
+//   var location = { lat: 53.770258, lng: 20.479574 };
+//   var map = new google.maps.Map(document.getElementById('map1'), { zoom: 8, center: location });
+//   var marker = new google.maps.Marker({ position: location, map: map, title: "Miejski Szpital Zespolony" });
+// }
