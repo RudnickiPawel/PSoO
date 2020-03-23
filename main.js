@@ -1,7 +1,7 @@
 $(document).ready(function () {
   require.config({
     paths: {
-      gmaps: '//maps.googleapis.com/maps/api/js?key=AIzaSyDmpSQJyP2OyFEDoSuvPQMRHTtMamjAMnA'
+      gmaps: '//maps.googleapis.com/maps/api/js?key=YOUR_API_KEY'
     },
     shim: {
       gmaps: {
