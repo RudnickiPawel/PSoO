@@ -5,7 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "google-maps": "^4.2.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "plyr": "^3.5.10",
     "slick-carousel": "^1.8.1"
   },
